@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "educate-me",
+    "slug": "educate-me",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "educate-me"
+}
