@@ -5,7 +5,15 @@
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "9d768027-ddb3-45cb-88a2-b03dad4e9d96"
+      }
+    },
+    "ios": {
+      "buildNumber": "3"
+    }
   },
   "name": "educate-me"
 }
