@@ -39,6 +39,7 @@ end
 
 target 'educateme' do
   use_expo_modules!
+  use_modular_headers!
   config = use_native_modules!
 
   use_frameworks! :linkage => podfile_properties['ios.useFrameworks'].to_sym if podfile_properties['ios.useFrameworks']
@@ -73,6 +74,11 @@ target 'educateme' do
   end
 
   post_integrate do |installer|
+    begin
+      expo_patch_react_imports!(installer)
+    rescue => e
+      Pod::UI.warn e
+    end
     begin
       expo_patch_react_imports!(installer)
     rescue => e
