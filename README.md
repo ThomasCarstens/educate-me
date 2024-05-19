@@ -1,0 +1,1 @@
+![DALL·E 2024-04-24 18 40 47 - A pixelated mansion with doors leading to real-life scenes  Each door opens to different settings a kitchen with a chef in a white uniform, a barbers](https://github.com/ThomasCarstens/educate-me/assets/36089032/593758b0-7416-44f3-b314-d7d6a66f5a9a)
