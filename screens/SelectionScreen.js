@@ -1,4 +1,5 @@
-import { Button, Image, ImageBackground, Modal, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Button, Image, ImageBackground, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import Modal from "react-native-modal";
 import React, { useRef } from 'react'
 import {useState, useEffect} from 'react'
 import { auth, firebase } from '../firebase'
@@ -30,7 +31,7 @@ const SelectionScreen = (props) => {
     // Orientation.lockToLandscape();
     const navigation = useNavigation();
     const netInfo = useNetInfo();
-    const toast = useRef(null);
+    const toast = useRef();
     const [userData, setUserData] = useState()
     const [gameName, setGameName] = useState()
     const [gameFile, setGameFile] =   useState()
@@ -558,6 +559,7 @@ const SelectionScreen = (props) => {
       "Vegetables": require('../assets/thumbnails/vegetables.jpg'),
       "Footprints": require('../assets/thumbnails/footprints.jpg'),
       "Cereal": require('../assets/thumbnails/cereal.jpg'),
+      "South African Birds": require('../assets/thumbnails/cereal.jpg'),
       "Cheeses": require('../assets/thumbnails/cheeses.jpg'),
     };
 
@@ -600,7 +602,7 @@ const SelectionScreen = (props) => {
             } else { (auth.currentUser)?plsAwaitRelease():plsCreateAccount() }
 
             }}>
-            <ImageBackground source={ spoofThumbnailretrieval[each_game] } 
+            <ImageBackground source={ spoofThumbnailretrieval[each_game] }  // Patch: add new thumbnails
               style={thumbnailBg} imageStyle={thumbnailStyle}>
               <Text style ={styles.gameText}> {each_game} </Text>
               {!ifGameReleased(each_game)?<Image source={require('../assets/bg/soon.jpeg')} style={styles.soon}/>:<View></View>}
@@ -674,6 +676,7 @@ const SelectionScreen = (props) => {
         </View>
       )
       for (let family_i of familyList) {
+        // console.log('FamiliesBlock ' + family_i)
         let nextButton =      (  
         
           <TouchableOpacity
@@ -786,243 +789,44 @@ const SelectionScreen = (props) => {
       </View>
       </View>
 
+
+
+
       {/* MODAL IF modalVisible */}
       <Modal
       animationType="slide"
       transparent={true}
-      // backgroundColor='rgba(22, 160, 133, 0.8)'
-      visible={modalVisible} //instead of on state change modalVisible
+      visible={modalVisible} 
+      onBackdropPress={() => setModalVisible(false)}
       onRequestClose={() => {
         Alert.alert("Modal has been closed.");
         setModalVisible(!modalVisible);
       }}
       >
 
-    {/* SAFE AREA !! */}
-     {/* <SafeAreaView style ={styles.webContainer}>
-        <View style ={styles.webContent}>    */}
-
-<View backgroundColor='rgba(13, 1, 117, 0.8)'>
-          {/* <View style={{ flexDirection:"row"}}> */}
-            {/* <View padding={400} ></View> */}
-          
-            <View style={styles.modalRow}>
-            <ScrollView  contentContainerStyle= {styles.gameRow}>
-            <View flexDirection='column' marginBottom={3300}>
-
-            <TouchableOpacity
-                    style={styles.gameSelectionModal}
-                    key={'BackButton'}
-                    onPress={() => {
-                      setModalVisible(!modalVisible);
-                    }}>
-                      <Text style={{fontWeight:"bold"}}> {"\n BACK"} </Text>
-            </TouchableOpacity> 
+        <View backgroundColor='rgba(13, 1, 117, 0.8)'>
             
-            <FamiliesBlock></FamiliesBlock>
-            {/* <TouchableOpacity
-                    style={styles.gameSelectionModal}
-                    onPress={() => {
-                      setModalVisible(!modalVisible);                      
-                      startThreadedGame("Hounds")
+              <View style={styles.modalRow}>
+              <ScrollView  contentContainerStyle= {styles.gameRow}>
+              <View flexDirection='column' marginBottom={3300}>
 
-                      }}>
-                      <View flexDirection='row'>
-                        <Text style={{fontWeight:"bold", color:'rgb(50, 100, 1000)', fontSize:18, marginTop:-10}}> {"\n Hounds"} </Text>
-                        
-                        <Progress.Bar progress={0.8} color='rgb(13, 1, 117)' borderRadius={20} marginLeft={10} marginTop={10} width={140} height={30}>
-                          <Text style={styles.modalProgressBarText}>12 Species</Text>
-                        </Progress.Bar>
-                      </View>
-                      
-            </TouchableOpacity> 
-
-            <TouchableOpacity
-                    style={styles.gameSelectionModal}
-                    onPress={() => {
-                      setModalVisible(!modalVisible);                      
-                      startThreadedGame("Shepherd dogs")
-                    }}>
-                      <View flexDirection='row'>
-                        <Text style={{fontWeight:"bold", color:'rgb(50, 100, 1000)', fontSize:18, marginTop:-10}}> {"\n Shepherd dogs"} </Text>
-                        
-                        <Progress.Bar progress={0.8} color='rgb(13, 1, 117)' borderRadius={20} marginLeft={10} marginTop={10} width={140} height={30}>
-                          <Text style={styles.modalProgressBarText}>{spoofGameFolders["Dogs"]["Shepherd dogs_ALL"].length} Species</Text>
-                        </Progress.Bar>
-                      </View>
-            </TouchableOpacity>  */}
-
-            {/* <TouchableOpacity
-                    style={styles.gameSelectionModal}
-                    onPress={() => {
-                      // setModalVisible(!modalVisible);
-                    }}>
-                      <View flexDirection='row'>
-                        <Text style={{fontWeight:"bold", color:'rgb(50, 100, 1000)', fontSize:18, marginTop:-10}}> {"\n Pointers"} </Text>
-                        
-                        <Progress.Bar progress={0.8} color='rgb(13, 1, 117)' borderRadius={20} marginLeft={10} marginTop={10} width={140} height={30}>
-                          <Text style={styles.modalProgressBarText}>31/{spoofGameFolders["Dogs"]["Hounds_ALL"].length} Species</Text>
-                        </Progress.Bar>
-                      </View>
-            </TouchableOpacity>  */}
-
-              {/* {(auth.currentUser)?
               <TouchableOpacity
-                    style={styles.gameSelectionModal}
-
-                    onPress={() => {
-                      setModalVisible(!modalVisible);
-                      navigation.navigate(gameType, { 
-                        name: gameName, 
-                        
-                        folder: folderName,
-                        hint: hintImages, 
-                        level: userData[gameName]['latestLevel']['gameSetLevel'], 
-                        data: userData })
-                    }}>
-
-                      <Text style={{fontWeight:"bold"}}> {"\n CONTINUE GAME"} </Text>
-                  </TouchableOpacity>  
-:<View></View>} */}
-
-                  {/* <TouchableOpacity
-                    style={styles.gameSelectionModal}
-
-                    onPress={() => {
-                      setModalVisible(!modalVisible);
-                      navigation.navigate('Score', { // The population average can be computed by cloud functions
-                        name: gameName,
-                        folder: folderName,
-                        hint: hintImages, 
-                        macroName: "Hounds",
-                        level: (auth.currentUser)?userData[gameName]['latestLevel']['gameSetLevel']:0, 
-                        data: (auth.currentUser)?userData:0 })
-                    }}>
-
-                      <Text style={{fontWeight:"bold"}}> {"\n RANKING"} </Text>
-                  </TouchableOpacity>  
-                
-                  <TouchableOpacity
-                    style={styles.gameSelectionModal}
-
-                    onPress={() => {
-                      setModalVisible(!modalVisible);
-                      console.log(hintImages)
-                      navigation.navigate(gameType, { 
-                        name: gameName,
-                        folder: folderName, 
-                        hint: hintImages, 
-                        level: 0, 
-                        data: 0 })
-                    }}>
-
-                      <Text style={{fontWeight:"bold"}}> {"\n Image Recognition"} </Text>
-                  </TouchableOpacity>  
-                  
-
-                  <TouchableOpacity
-                    style={styles.gameSelectionModal}
-
-                    onPress={() => {
-                      setModalVisible(!modalVisible);
-                      setApplicationModalVisible(true);
-                      // navigation.navigate('Application', { // The population average can be computed by cloud functions
-                      //   name: gameName,
-                      //   hint: hintImages, 
-                      //   level: (auth.currentUser)?userData['Animal tracks']['gameSetLevel']:0, 
-                      //   application: applicationImages,
-                      //   applicationName: "Dog hunting situations",
-                      //   data: (auth.currentUser)?userData:0 })
-                    }}
-                    >
-
-                      <Text style={{fontWeight:"bold"}}> {"\n APPLICATIONS"} </Text>
-                  </TouchableOpacity>               */}
-                  
-                  {/* <TouchableOpacity
-                    style={styles.gameSelectionModal}
-
-                    onPress={() => {
-                      setModalVisible(!modalVisible);
-                      navigation.navigate('Test', { // The population average can be computed by cloud functions
-                        name: gameName,
-                        folder: folderName,
-                        hint: hintImages, 
-                        level: (auth.currentUser)?userData[gameName]['gameSetLevel']:0, 
-                        data: (auth.currentUser)?userData:0 })
-                    }}>
-
-                      <Text style={{fontWeight:"bold"}}> {"\n TEST YOUR KNOWLEDGE"} </Text>
-                  </TouchableOpacity>   */}
-
-                  {/* <TouchableOpacity
-                    style={styles.gameSelectionModal}
-
-                    onPress={() => {
-                      setModalVisible(!modalVisible);
-                      navigation.navigate('Comparison', { // The population average can be computed by cloud functions
-                        name: gameName,
-                        folder: folderName,
-                        hint: hintImages, 
-                        level: (auth.currentUser)?userData[gameName]['gameSetLevel']:0, 
-                        data: (auth.currentUser)?userData:0 })
-                    }}>
-
-                      <Text style={{fontWeight:"bold"}}> {"\n COMPARISON??"} </Text>
-                  </TouchableOpacity>   */}
-
-                  {/* <TouchableOpacity
-                    style={styles.gameSelectionModal}
-
-                    onPress={() => {
-                      setModalVisible(!modalVisible);                      
-                      let macroLevel = 0 
-                      navigation.navigate(spoofMacroGameSets[folderName][gameName][macroLevel+ 1][1], { 
-                        name: spoofMacroGameSets[folderName][gameName][macroLevel+ 1][0],
-                        folder: spoofMacroGameSets[folderName][gameName][macroLevel+ 1][2],
-                        macroName: gameName,
-                        gameIsThreaded: 1,
-                        macroLevel: 1,
-                        application: applicationImages,
-                        hint: hintImages, 
-                        level: (auth.currentUser)?userData[gameName]['latestLevel']['gameSetLevel']:0, 
-                        data: (auth.currentUser)?userData:0 })
-                    }}>
-
-                      <Text style={{fontWeight:"bold"}}> {"\n THREAD"} </Text>
-                  </TouchableOpacity>   */}
-
-
-
-
-            </View>
-            </ScrollView>
-          
-            
-            
-              {/* <TouchableOpacity
-                style={styles.gameSelection}
-                onPress={() => {
-                  setModalVisible(!modalVisible);
-
-                  navigation.navigate('Selection')
-                }}>
-      
-                <Text> {"\n EXIT TO GAME SELECTION"} </Text>
-              </TouchableOpacity> */}
-              <Image source={{uri:`${outcomeImage[gameName]}`}} style={{height:200, width:360, marginLeft:-10, marginTop:50}}></Image>
-            
-            
+                      style={styles.gameSelectionModal}
+                      key={'BackButton'}
+                      onPress={() => {
+                        setModalVisible(!modalVisible);
+                      }}>
+                        <Text style={{fontWeight:"bold"}}> {"\n BACK"} </Text>
+              </TouchableOpacity> 
               
+              <FamiliesBlock></FamiliesBlock>
 
-            {/* </View> */}
+              </View>
+              </ScrollView>
+            
+            </View>
+        </View>
 
-          </View>
-      </View>
-
-      {/* </View>
-
-     </SafeAreaView>  */}
       </Modal>
 
 
@@ -1032,36 +836,36 @@ const SelectionScreen = (props) => {
       <Modal
       animationType="slide"
       transparent={true}
-      // backgroundColor='rgba(22, 160, 133, 0.8)'
-      visible={applicationModalVisible} //instead of on state change modalVisible
+      visible={applicationModalVisible} 
+      onBackdropPress={() => setModalVisible(false)}
       onRequestClose={() => {
         Alert.alert("Modal has been closed.");
         setModalVisible(!modalVisible);
       }}
       >
 
-<View backgroundColor='rgba(46, 204, 113, 0.8)'>
-       
-            <View style={styles.modalRow}>
-
-            <View flexDirection='column' marginBottom={3300}>
+            <View backgroundColor='rgba(46, 204, 113, 0.8)'>
                   
-                  <ApplicationsBlock/> 
+                <View style={styles.modalRow}>
 
-                  <TouchableOpacity
-                    style={styles.gameSelectionModal}
-                    onPress={() => {
-                      setApplicationModalVisible(!applicationModalVisible);
-                    }}>
-                      <Text style={{fontWeight:"bold"}}> {"\n BACK"} </Text>
-                  </TouchableOpacity>  
+                  <View flexDirection='column' marginBottom={3300}>
+                        
+                        <ApplicationsBlock/> 
+
+                        <TouchableOpacity
+                          style={styles.gameSelectionModal}
+                          onPress={() => {
+                            setApplicationModalVisible(!applicationModalVisible);
+                          }}>
+                            <Text style={{fontWeight:"bold"}}> {"\n BACK"} </Text>
+                        </TouchableOpacity>  
+                  </View>
+                        
+                              {/* REMOVED
+                          <Image source={{uri:`${outcomeImage[gameName]}`}} style={{height:300, width:500, marginLeft:-10}}></Image> */}
+                        
+                </View>
             </View>
-            
-            
-              <Image source={{uri:`${outcomeImage[gameName]}`}} style={{height:300, width:500, marginLeft:-10}}></Image>
-            
-          </View>
-      </View>
 
       </Modal>
 

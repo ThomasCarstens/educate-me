@@ -1,6 +1,6 @@
-import { StyleSheet, Image, Text, TouchableOpacity, View, TouchableHighlight, TextInput, StatusBar, Modal, Platform, Linking, Dimensions } from 'react-native'
+import { StyleSheet, Image, Text, TouchableOpacity, View, TouchableHighlight, TextInput, StatusBar, Platform, Linking, Dimensions } from 'react-native'
 import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
-// import { Image } from 'expo-image';
+import Modal from "react-native-modal";
 import { auth, storage, database } from '../firebase'
 import { uid } from 'uid';
 import { useNavigation } from '@react-navigation/core'

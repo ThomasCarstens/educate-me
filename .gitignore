@@ -38,3 +38,6 @@ yarn-error.*
 .expo
 dist/
 web-build/
+
+#Assets
+heavy_rapatriation/

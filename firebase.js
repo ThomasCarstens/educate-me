@@ -4,8 +4,10 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import { getApp, getApps, initializeApp } from "firebase/app";
-import { browserLocalPersistence, browserSessionPersistence, getAuth, initializeAuth } from "firebase/auth";
-import { getReactNativePersistence } from '@react-native-firebase/auth';
+import { browserLocalPersistence, browserSessionPersistence, getAuth, initializeAuth, getReactNativePersistence } from "firebase/auth";
+// import {  } from '@react-native-firebase/auth';
+import ReactNativeAsyncStorage from '@react-native-async-storage/async-storage';
+
 // import AsyncStorage from '@react-native-async-storage/async-storage';
 import { getStorage } from "firebase/storage";
 import { getDatabase } from 'firebase/database';
@@ -30,8 +32,10 @@ if (firebase.apps.length === 0) {
   app = firebase.app()
 }
 
-const auth = getAuth(app);
-
+const auth = getAuth(app); // Deactivated to have session-persistent auth.
+// const auth = initializeAuth(app, {
+//   persistence: getReactNativePersistence(ReactNativeAsyncStorage)
+// });
 
 // const auth = firebase.auth()
 const storage = getStorage(app);

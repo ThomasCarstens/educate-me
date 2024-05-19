@@ -3,7 +3,13 @@ import React, { useContext } from 'react'
 import {useState, useEffect, useRef} from 'react'
 import { auth, firebase } from '../firebase'
 import { useNavigation } from '@react-navigation/core'
-import { browserLocalPersistence, browserSessionPersistence, createUserWithEmailAndPassword, setPersistence, signInWithEmailAndPassword } from 'firebase/auth'
+import { browserLocalPersistence, browserSessionPersistence, getReactNativePersistence, createUserWithEmailAndPassword, setPersistence, signInWithEmailAndPassword } from 'firebase/auth'
+
+// import ReactNativeAsyncStorage from '@react-native-async-storage/async-storage';
+
+
+
+
 // import AsyncStorage from '@react-native-async-storage/async-storage'
 import * as ScreenOrientation from 'expo-screen-orientation';
 import { ref as ref_d, set, get, onValue } from 'firebase/database'
