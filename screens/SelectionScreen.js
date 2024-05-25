@@ -494,8 +494,8 @@ const SelectionScreen = (props) => {
       }
 
       // Navigation
-
-      navigation.navigate(spoofMacroGameSets[folderName][threadedGameName][macroLevel+ 1][1], { 
+      // Other than Species: spoofMacroGameSets[folderName][threadedGameName][macroLevel+ 1][1]
+      navigation.navigate("Species", { 
         gameFile: gameFile,
         name: spoofMacroGameSets[folderName][threadedGameName][macroLevel+ 1][0],
         folder: spoofMacroGameSets[folderName][threadedGameName][macroLevel+ 1][2],
@@ -597,7 +597,7 @@ const SelectionScreen = (props) => {
             if (ifGameReleased(each_game)){
               setGameName(each_game)
               setFolderName(each_game)
-              setGameType('Home') 
+              setGameType('Species') 
               setModalVisible(true)
             } else { (auth.currentUser)?plsAwaitRelease():plsCreateAccount() }
 

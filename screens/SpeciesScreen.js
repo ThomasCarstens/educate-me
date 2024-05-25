@@ -7,33 +7,13 @@ import { useNavigation } from '@react-navigation/core'
 import { getDownloadURL, getMetadata, getStorage, list, listAll, ref, updateMetadata, uploadBytes,  } from 'firebase/storage'
 import { ref as ref_d, set, get, onValue } from 'firebase/database'
 import * as ImagePicker from "expo-image-picker";
-// import firebase from 'firebase/compat/app';
-// import ImageSlider from 'react-native-image-slider';
-// import { useToast } from 'react-native-fast-toast';
 import Toast from 'react-native-fast-toast';
 import * as Progress from 'react-native-progress';
-// import { SafeAreaView } from 'react-native-web';
 import * as ScreenOrientation from 'expo-screen-orientation';
 import { Audio } from "expo-av"
-// import { useNetInfo } from '@react-native-community/netinfo';
-// import Image from 'react-native-fast-image';
-// import {ImageCacheProvider} from 'react-native-cached-image'; //<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-// import Image from 'react-native-fast-image';
-
-// import Toast, { useToast } from 'react-native-toast-notifications';
-// import { Platform } from 'react-native/types';
-// import Toast from 'react-native-fast-toast/lib/typescript/toast';
-
-// import Carousel from 'react-native-snap-carousel';
-// import Carousel from 'react-native-reanimated-carousel';
-
-// https://www.wineware.co.uk/glassware/beginners-guide-to-different-types-of-wine-glasses
-
-// Local Gamefile.
-// import { spoofGameSets, spoofOutcomeImages, spoofInstructions, spoofIncorrectTag, spoofCorrectTag, spoofMacroGameSets, spoofGameFolders} from '../gameFile';
 
 
-const HomeScreen = (props) => {
+const SpeciesScreen = (props) => {
 
   // Using gameFile downloaded upon Login.
   
@@ -57,19 +37,7 @@ const HomeScreen = (props) => {
   console.log('selected Game is', selectedGame)
   const selectedFolder = props.route.params?.folder
   console.log('selected Folder is', selectedFolder)
-  const [tagList, setTagList] = useState(spoofGameFolders[selectedFolder][selectedGame])
-  // LOCATIONS REFERENCES: Download locations using the tags from Gamefile
-
-  // Empty the gallery in preparation for Download
-  // const myTags = spoofGameFolders[selectedFolder][selectedGame]
-  // allTags = spoofGameFolders[selectedFolder][selectedGame] //4 tags
-  // console.log("allTags is ", allTags)
-  // // allTags = spoofGameFolders[selectedFolder][selectedGame] //all macro tags
-  // setTagList(myTags)
-  
   useEffect(()=>{   
-
-    
 
     // First if-else downloads the gameFile (and avoids task if already done)
 
@@ -95,15 +63,12 @@ const HomeScreen = (props) => {
     if (props.route.params.gameDownloaded){ //if exists and true.
       // Tags already passed through the navigator
       console.log("--> Images already Downloaded. Starting the Shuffle.")
-      // console.log(savedMacroTags)
-      // console.log(savedMacroTags)
-      // doShuffleAndLay(savedMacroTags)
+      // setGalleryTags(savedMacroTags)
+      doShuffleAndLay(savedMacroTags)
       setTagDictionary(savedMacroTags)
       setGalleryTags(savedMacroTags)
-      doShuffleAndLay(savedMacroTags)
 
     } else {
-      console.log("TagDict not passed.")
       // Set up the Tag List to retrieve images by reference from Firebase Realtime Database.
       macroTags = spoofGameFolders[selectedFolder][macroName+'_ALL'] // All macro tags
       console.log(selectedFolder , ' / ', macroName,'_ALL')
@@ -128,9 +93,9 @@ const HomeScreen = (props) => {
     
     for (let tag_i=0; tag_i<tagList.length ; tag_i++) {
       try {
-        // console.log('id of tag', tag_i)
-        // console.log('getting tag', tagList[tag_i])
-        // console.log('getting url list for tag', ...allGalleryTags[tagList[tag_i]])
+        console.log('id of tag', tag_i)
+        console.log('getting tag', tagList[tag_i])
+        console.log('getting url list for tag', ...allGalleryTags[tagList[tag_i]])
         tagUrls = [...tagUrls, ...allGalleryTags[tagList[tag_i]]]
       } catch (error) {
         console.log(error)
@@ -155,7 +120,7 @@ const HomeScreen = (props) => {
       tagUrls.sort( () => .3 - Math.random() );
       visibleGallery = tagUrls.slice(2, 10)
       tagDict = {...allGalleryTags}
-      // console.log(tagDict[correctTag])
+      console.log(tagDict[correctTag])
       // if (tagDict[correctTag]) {
         selectionUrls = tagDict[correctTag]
         correctLeftInGallery = selectionUrls.filter((url) => visibleGallery.includes(url) )
@@ -224,14 +189,14 @@ const HomeScreen = (props) => {
   const [incorrectClickCount, setIncorrectClickCount] = useState(0)
   
   const [successRate, setSuccessRate] = useState(1)
-  const [modalVisible, setModalVisible] = useState(false)
+  const [modalVisible, setModalVisible] = useState(true)
   // setSelectedGame(spoofMacroGameSets[selectedFolder][macroName][gameSetLevel][0])
   
   // const [gameName, setGameName ] = useState(spoofIncorrectTag[gameName][learningLevel]) // this is an issue upon first load.
   const [incorrectTag, setIncorrectTag ] = useState(spoofIncorrectTag[selectedGame][learningLevel]) // this is an issue upon first load.
   const [instructionText, setInstructionText] = useState(spoofInstructions[selectedGame][learningLevel])
   const [correctTag, setCorrectTag] = useState(spoofCorrectTag[selectedGame][learningLevel])
-  
+  const [tagList, setTagList] = useState(spoofGameFolders[selectedFolder][selectedGame])
   const [sort, setSort] = useState(false)
   
   // const [outcomeImage, setOutcomeImage] = useState(spoofOutcomeImages[gameName][learningLevel])
@@ -296,9 +261,10 @@ const HomeScreen = (props) => {
   }, [learningLevel, gameSetLevel])
 
   // updating instructions brings up a toastmessage
-  useEffect(() => {
-    toast.current.show(instructionText, { type: "success" });
-  }, [instructionText])
+  /* DEBUG */
+  // useEffect(() => {
+  //   toast.current.show(instructionText, { type: "success" });
+  // }, [instructionText])
 
   // Download when finished updated incorrectTag (via learningLevel change)
   useEffect(()=> {
@@ -311,8 +277,37 @@ const HomeScreen = (props) => {
     console.log("allTags is ", allTags)
     // allTags = spoofGameFolders[selectedFolder][selectedGame] //all macro tags
     setTagList(myTags)
-    // doShuffleAndLay(tagDictionary)
+    // next_ref = ref(storage, selectedFolder + '/'+correctTag+'/');
+    // allTags.filter(tag => tag !== correctTag);
+    // getImagesFromRef(next_ref, correctTag, 4)
     
+    // for (let i_ref=0; i_ref<allTags.length; i_ref++){
+    //   nextTag = allTags[i_ref]
+    //   next_ref = ref(storage, selectedFolder + '/'+nextTag+'/');
+    //   getImagesFromRef(next_ref, allTags, 4)
+    // }
+
+    
+  
+    // const correctListRef = ref(storage, selectedFolder + '/'+correctTag+'/');
+    // console.log(incorrectTag)
+    // const incorrectListRef = ref(storage, selectedFolder + '/'+incorrectTag[0]+'/');
+    
+    // if (incorrectTag.length>1){
+    //   var incorrectListRef2 = ref(storage, selectedFolder + '/'+incorrectTag[1]+'/');
+    //   var incorrectListRef3 = ref(storage, selectedFolder + '/'+incorrectTag[2]+'/');
+    // }
+
+    // Download from DB storage to gallery
+    // getImagesFromRef(incorrectListRef, incorrectTag[0], 4).then(()=>{
+    //   getImagesFromRef(correctListRef, correctTag, 4)?.then(()=> {
+    //       getImagesFromRef(incorrectListRef2, incorrectTag[1], 4)?.then(()=> {
+    //         if (incorrectListRef3){
+    //           getImagesFromRef(incorrectListRef3, incorrectTag[2], 4)
+    //         }  
+    //     })
+    //   })
+    // })     
 
   }, [incorrectTag]) //TEST
 
@@ -718,15 +713,7 @@ const HomeScreen = (props) => {
           setSuccessRate(prev => (prev+averageCorrectRate)/2) // will be reset once per game.
           const currentDate = new Date();
           const timestamp = currentDate.getTime(); 
-
-          // // Update Latest Level (is reset for every level)
-          // set(ref_d(database, `${auth.currentUser.email.split('.')[0]}/`+selectedFolder+'/'+macroName+'/latestLevel/'), {
-          //   gameSetLevel: gameSetLevel,
-          //   folder: selectedFolder,
-          //   gameName: spoofGameFolders[selectedFolder][selectedGame][0],
-          //   levelGrouping: gameName,
-          //   macroName: macroName,
-          // }).catch(error =>alert(error.message));       
+    
 
           // Update Level Accuracy (set by timestamp to prevent resetting)//auth.currentUser.email.split('.')[0]
           set(ref_d(database, `userdata/${auth.currentUser.uid}/`+selectedFolder+'/'+macroName+'/accuracy/'+(gameSetLevel) + '/'+timestamp), {
@@ -747,19 +734,8 @@ const HomeScreen = (props) => {
       // Optional Modal Window
       // setModalVisible(true)
 
-      navigation.replace("Species", { 
-        gameFile: gameFile,
-        name: spoofMacroGameSets[selectedFolder][macroName][macroLevel][0],
-        folder: spoofMacroGameSets[selectedFolder][macroName][macroLevel][2],
-        macroLevel: macroLevel,
-        macroName: macroName,
-        hint: hint, 
-        gameIsThreaded: 1,
-        gameDownloaded: 1, // Ideally set to 1 to limit the number of downloads
-        galleryTags: tagDictionary,
-        application: applicationImages,
-        level: gameSetLevel, //gameName?
-        data: (auth.currentUser)?userData:0 })
+      // NOT HERE> HOME
+
 
       return
     } else {
@@ -804,234 +780,6 @@ const HomeScreen = (props) => {
     
 
     <View>
-      <Toast ref={toast}  style={styles.toastPosition}/>
-      <View style={{padding: 15}}></View>
-      <View style={{flexDirection: 'row', alignItems: 'center', justifyContent:'flex-start'}}>
-        <TouchableOpacity  onPress={handleSelectionScreen}>
-          <Text style={{...styles.buttonText, color:'black'}}>{"< Back"}</Text>
-        </TouchableOpacity>
-        <Text style={{fontSize: 13, alignContent: 'flex-end', marginLeft: 20}} > 
-        {macroName.toUpperCase()} Game </Text>
-
-          
-      </View>
-      <View style={{flexDirection: 'column', alignItems: 'center'}}>
-      
-      {/* <Text style={{fontSize: 20, color:'black'}}> {instructionText} </Text> */}
-
-      {/* IMAGE ONLY IN HOME SCREEN */}
-      {/* <Image 
-
-          source={{uri:`${galleryTags[correctTag]}`,}}
-          style={{...styles.imageContainer, height:100, width: 100}}
-          placeholder={blurhash}
-          contentFit="cover"
-          transition={1000}
-        /> */}
-        </View>
-      
-      <View style={{padding: 3}}></View>
-      <View style={{flexDirection: 'row'}} >
-      <View style={{ flex: 1, width: 20, height: 150*3, backgroundColor: 'rgb(13, 1, 117)' }}/>
-      <View style={{flexDirection: 'column', width:115, marginTop:10}}>
-      <Text style={{fontSize: 20, color:'black'}}> {instructionText} </Text>
-      <View   style={{flexDirection: 'column', alignItems: 'center', justifyContent: 'space-around'}}>
-
-
-
-{/* NEXT LEVEL (when GameComplete) / Progress BAR (when not) */}
-
-{(gameComplete&&(!gameSetComplete))? 
-/*A - if between games*/
-<TouchableOpacity  padding={50}  style={styles.button} onPress={nextGameSetLevel} >
-      <Text style={styles.buttonText}>Next Level</Text>
-</TouchableOpacity>
-
-
-:(gameSetComplete)? 
-/*B - if at end of game set*/
-<TouchableOpacity  padding={50}  style={styles.buttonRainbox} onPress={()=>{
-
-    // Key information upon ending a set.
-    setSuccessRate(correctClickCount/(correctClickCount+incorrectClickCount))
-    let date_finished = new Date();
-    const finishTimestamp = date_finished.getTime(); 
-
-    // MacroGames ('threaded') lead on to the next, else replace with Final Score.
-    if (gameIsThreaded ==1) {
-
-      navigation.replace(spoofMacroGameSets[selectedFolder][macroName][macroLevel+ 1][1], { 
-        gameFile: gameFile,
-        name: spoofMacroGameSets[selectedFolder][macroName][macroLevel+ 1][0],
-        folder: spoofMacroGameSets[selectedFolder][macroName][macroLevel+ 1][2],
-        macroLevel: macroLevel + 1,
-        macroName: macroName,
-        hint: hint, 
-        gameIsThreaded: 1,
-        gameDownloaded: 1,
-        galleryTags: galleryTags,
-        application: applicationImages,
-        level: gameSetLevel+1, //gameName?
-        data: (auth.currentUser)?userData:0 })
-    } else {
-
-      navigation.replace('Score', { 
-        gameFile: gameFile,
-        name: selectedGame,
-        lastscore: successRate, 
-        lastdate: finishTimestamp,
-        data:  (auth.currentUser)?userData:0 })          
-    }
-}}>
-    <Text style={styles.buttonText}>Finish</Text></TouchableOpacity>
-
-: /*C - else if game is not complete*/
-<Progress.Bar progress={progressCalculate()} color={'rgb(13, 1, 117)'}  borderRadius={20} marginTop={20} width={110} height={30}/>
-}
-
-
-<TouchableOpacity  padding={50}  style={{...styles.button, width:100}} onPress={()=>setShowHint(!showHint)} >
-    {// HINT SHOWN
-    showHint?<Image 
-      source={{uri:`${galleryTags[correctTag]}`,}}
-      style={{...styles.imageContainer, height:100, width: 100}}
-      placeholder={blurhash}
-      contentFit="cover"
-      transition={1000}
-      />:<Text style={styles.buttonText}>Hint</Text>}
-</TouchableOpacity>
-
-
-
-</View>
-       </View> 
-
-       <View style={{ flex: 1, width: 20, height: 150*3, backgroundColor: 'rgb(13, 1, 117)' }}></View>
-      <View style={{flexDirection: 'column'}}>
-        <TouchableHighlight onPress={()=> handlePicSelection(1)}>
-        {gallery[0] !== '' ?
-          <Image 
-
-            source={{uri:`${gallery[0]}`,}}
-            style={styles.imageContainer}
-            placeholder={blurhash}
-            contentFit="cover"
-            transition={1000}
-          />:null}
-        </TouchableHighlight>
-
-        <TouchableHighlight onPress={()=> handlePicSelection(4)}>
-        {gallery[3] !== '' ?
-        <Image 
-          source={{uri:`${gallery[3]}`,}}
-          style={styles.imageContainer}
-          placeholder={blurhash}
-          contentFit="cover"
-          transition={1000}
-        />:null}
-        </TouchableHighlight>    
-
-      </View>
-
-      
-      <View style={{flexDirection: 'column'}}>
-
-
-        <TouchableHighlight onPress={()=> handlePicSelection(2)}>
-        {gallery[1] !== '' ?
-        <Image 
-          source={{uri:`${gallery[1]}`,}}
-          style={styles.imageContainer}
-          placeholder={blurhash}
-          contentFit="cover"
-          transition={1000}
-        />:null}
-        </TouchableHighlight>
-
-        <TouchableHighlight onPress={()=> handlePicSelection(5)}>
-          {gallery[4] !== '' ?
-          <Image 
-            source={{uri:`${gallery[4]}`,}}
-            style={styles.imageContainer}
-            placeholder={blurhash}
-            contentFit="cover"
-            transition={1000}
-          />:null}        
-        </TouchableHighlight>
-        
-      </View>
-
-      <View style={{flexDirection: 'column'}}>
-
-
-        <TouchableHighlight onPress={()=> handlePicSelection(3)}>
-        {gallery[2] !== '' ?
-        <Image 
-          source={{uri:`${gallery[2]}`,}}
-          style={styles.imageContainer}
-          placeholder={blurhash}
-          contentFit="cover"
-          transition={1000}
-        />:null} 
-        </TouchableHighlight>
-
-        <TouchableHighlight onPress={()=> handlePicSelection(6)}>
-        {gallery[5] !== '' ?
-          <Image 
-            source={{uri:`${gallery[5]}`,}}
-            style={styles.imageContainer}
-            placeholder={blurhash}
-            contentFit="cover"
-            transition={1000}
-          />:null}         
-        </TouchableHighlight>
-      </View>
-      <View style={{ flex: 1, width: 20, height: 150*3, backgroundColor: 'rgb(13, 1, 117)' }}/></View>
-    <View style={styles.container}>
-
-      
-      {/* KEEP THIS STUFF
-      
-      <Text>Email: {auth.currentUser?.email}</Text> */}
-      
-      {/* <TextInput
-      onChangeText={onChangeCustomMetadataInput}
-      value={customMetadataInput}
-      style={styles.input}>
-      </TextInput>  */}
-
-      
-
-     {/* <TouchableOpacity style={styles.button} onPress={pickImage} >
-        <Text style={styles.buttonText}>Choose File</Text>
-      </TouchableOpacity>
-
-      
-
-      <TouchableOpacity style={styles.button} onPress={uploadImage} >
-        <Text style={styles.buttonText}>Upload</Text>
-      </TouchableOpacity> */}
-
-
-
-      {/* <TouchableOpacity style={styles.button} onPress={handleSignOut}>
-        <Text style={styles.buttonText}>Sign Out</Text>
-      </TouchableOpacity> */}
-
-    </View>
-
-
-      {/* MODAL IF modalVisible */}
-      <Modal
-      animationType="fade"
-      transparent={false}
-      // backgroundColor='rgba(22, 160, 133, 0.8)'
-      visible={modalVisible} //instead of on state change modalVisible
-      onRequestClose={() => {
-        Alert.alert("Modal has been closed.");
-        setModalVisible(!modalVisible);
-      }}
-      >
 
       <View  style={{backgroundColor:colors.background, marginTop: 20}}> 
       <View style={{flexDirection: 'row', alignItems: 'center', justifyContent:'flex-start'}}>
@@ -1049,11 +797,7 @@ const HomeScreen = (props) => {
       <View style={{padding: 3}}>      
 
     </View>
-          {/* {(hint[(gameSetLevel+1).toString()])?
-           <Image source={{uri: `${hint[(gameSetLevel+1).toString()]}`}} style={{height:(webView)?600:200, width:(webView)?1000:330, marginLeft:(webView)?300:15, marginBottom:-150}}></Image>
-            : 
-            <View></View>
-        } */}
+
         <View style={{flexDirection: 'row'}} >
         <View style={{flexDirection: 'column'}}>
                 <TouchableOpacity >
@@ -1082,18 +826,6 @@ const HomeScreen = (props) => {
                   </View></View>
                 }
                 
-                {/* <TouchableOpacity >
-                <Image 
-                  source={{uri:`${galleryTags[incorrectTag[2]]}`,}}
-                  style={styles.imageContainer}
-                  placeholder={blurhash}
-                  contentFit="cover"
-                  transition={1000}
-                />
-                  <View style={styles.cardLabel}>
-                    <Text style={{backgroundColor:colors.cardTag}}>{findLabelOfPic(4)}</Text>
-                  </View>
-                </TouchableOpacity>     */}
 
               </View>
 
@@ -1124,18 +856,7 @@ const HomeScreen = (props) => {
                     <Text style={{marginBottom:-4}}>{'Login for progress bar.'}</Text>
                   </View></View>
                 }
-                {/* <TouchableOpacity >
-                  <Image 
-                    source={{uri:`${galleryTags[incorrectTag[1]]}`,}}
-                    style={styles.imageContainer}
-                    placeholder={blurhash}
-                    contentFit="cover"
-                    transition={1000}
-                  />    
-                  <View style={styles.cardLabel}>
-                    <Text style={{backgroundColor:colors.cardTag}}>{findLabelOfPic(5)}</Text>
-                  </View>    
-                </TouchableOpacity> */}
+
                 
               </View>
 
@@ -1167,18 +888,6 @@ const HomeScreen = (props) => {
                 }                
 
                 
-                {/* <TouchableOpacity >
-                  <Image 
-                    source={{uri:`${galleryTags[incorrectTag[0]]}`,}}
-                    style={styles.imageContainer}
-                    placeholder={blurhash}
-                    contentFit="cover"
-                    transition={1000}
-                  />
-                  <View style={styles.cardLabel}>
-                    <Text style={{backgroundColor:colors.cardTag}}>{findLabelOfPic(6)}</Text>
-                  </View>        
-                </TouchableOpacity> */}
               </View>
 
               <View style={{flexDirection: 'column'}}>
@@ -1208,19 +917,6 @@ const HomeScreen = (props) => {
                   </View></View>
                 }      
 
-
-                {/* <TouchableOpacity >
-                  <Image 
-                    source={{uri:`${galleryTags[correctTag]}`,}}
-                    style={styles.imageContainer}
-                    placeholder={blurhash}
-                    contentFit="cover"
-                    transition={1000}
-                  />
-                <View style={styles.cardLabel}>
-                  <Text style={{backgroundColor:colors.cardTag}}>{findLabelOfPic(6)}</Text>
-                </View>        
-              </TouchableOpacity> */}
               </View>
               <View style={{padding: 20}}></View>
 
@@ -1230,29 +926,27 @@ const HomeScreen = (props) => {
                   style={{...styles.gameSelection}}
                   onPress={() => {
                   if (tagDictionary){
-                    doShuffleAndLay(tagDictionary).then(()=>{
-                      setModalVisible(!modalVisible) // GO TO SPECIES SCREEN
-                    })
+                    // doShuffleAndLay(tagDictionary).then(()=>{
+                      // setModalVisible(!modalVisible)
+                      // console.log(tagDictionary)
+                      navigation.replace("Home", { 
+                        gameFile: gameFile,
+                        name: spoofMacroGameSets[selectedFolder][macroName][macroLevel][0],
+                        folder: spoofMacroGameSets[selectedFolder][macroName][macroLevel][2],
+                        macroLevel: macroLevel,
+                        macroName: macroName,
+                        hint: hint, 
+                        gameIsThreaded: 1,
+                        gameDownloaded: 1, // Ideally set to 1 to limit the number of downloads
+                        galleryTags: tagDictionary,
+                        application: applicationImages,
+                        level: gameSetLevel, //gameName?
+                        data: (auth.currentUser)?userData:0 })
+                    // })
                   } else {
-                    // toast.current.show("Loading game.");
-                    toast.current.show("Loading game.", { type: "success" });
+                    toast.current.show("Loading game.");
                   }
                     
-                  //   if (Platform.OS === "android") {
-                  //     // netInfo.isConnected.fetch().then(isConnected => {
-                  //       if (netInfo.isConnected) {
-                  //         toast.current.show("You are online!");
-                  //         setModalVisible(!modalVisible);
-                  //       } else {
-                  //         toast.current.show("You are offline!");
-                  //       }
-                  //     // })
-                    
-                  //   // console.log(hint)
-                  // } else {
-                  //     toast.current.show("You are online!");
-                  //     setModalVisible(!modalVisible);
-                  // }
                 }}>
                     <Text style={{fontWeight:"bold"}}> {(tagDictionary)?"\n START":"\n LOADING..."}</Text>
                 </TouchableOpacity> 
@@ -1261,7 +955,7 @@ const HomeScreen = (props) => {
                   style={{...styles.gameSelection}}
                   onPress={() => {
                     if (tagDictionary){ // Making sure game is downloaded.
-                    setModalVisible(!modalVisible);
+                    // setModalVisible(!modalVisible);
                     
 
                     // Loop around macroGameSet
@@ -1270,8 +964,8 @@ const HomeScreen = (props) => {
 
                     
                     console.log('updated macroLevel is: ', macroLevel, 'and length: ', Object.keys(spoofMacroGameSets[selectedFolder][macroName]).length)
-
-                    navigation.replace(spoofMacroGameSets[selectedFolder][macroName][macroLevel+ 1][1], { 
+                    // For more screens: spoofMacroGameSets[selectedFolder][macroName][macroLevel+ 1][1]
+                    navigation.replace("Species", { 
                       gameFile: gameFile,
                       name: spoofMacroGameSets[selectedFolder][macroName][macroLevel+ 1][0],
                       folder: spoofMacroGameSets[selectedFolder][macroName][macroLevel+ 1][2],
@@ -1296,7 +990,7 @@ const HomeScreen = (props) => {
                       <TouchableOpacity
                     style={{...styles.gameSelection, backgroundColor: 'blue'}}
                     onPress={() => {
-                      setModalVisible(!modalVisible);
+                      // setModalVisible(!modalVisible);
                       navigation.replace('Login')
                       
                     }}>
@@ -1319,13 +1013,13 @@ const HomeScreen = (props) => {
 
 
       </View>
-      </Modal>
+      {/* </Modal> */}
     </View>
   )
 
 }
 
-export default HomeScreen
+export default SpeciesScreen
 
 const colors = {
   background: 'rgba(102, 0, 102, 0.8)',

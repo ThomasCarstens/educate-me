@@ -1,0 +1,2918 @@
+{
+  "gameFile": {
+    "spoofCorrectTag": {
+      "Africa_country_of_location": [
+        null,
+        "Morocco",
+        "Tunisia",
+        "Algeria",
+        "Libya",
+        "Algeria",
+        ""
+      ],
+      "Africa_id": [
+        null,
+        "Morocco",
+        "Tunisia",
+        "Algeria",
+        "Libya",
+        "Algeria",
+        ""
+      ],
+      "Animal gait from tracks": [
+        null,
+        "Waddlers",
+        "LeapersHoppers",
+        "Zigzaggers",
+        ""
+      ],
+      "Baguette": [
+        null,
+        "Baguette classique",
+        "Ficelle",
+        "Flute",
+        "Fournee",
+        "Viennoise",
+        "Baguette classique",
+        "Ficelle",
+        "Viennoise",
+        ""
+      ],
+      "Cheeses": [
+        null,
+        "Rochebaron",
+        "Bleu d'Auvergne",
+        "Roquefort",
+        "Bleu d'Auvergne",
+        ""
+      ],
+      "Choose the right knot": [
+        null,
+        "Reef Knot",
+        "Reef Knot",
+        "Reef Knot",
+        "Bowline Knot",
+        "Figure-8 Loop",
+        ""
+      ],
+      "DOVE01": [
+        null,
+        "African green-pigeon",
+        "Laughing dove",
+        "Namaqua dove",
+        "Rameron pigeon",
+        ""
+      ],
+      "DOVE02": [
+        null,
+        "Red-eyed dove",
+        "Rock pigeon",
+        "Speckled pigeon",
+        "Tambourine dove",
+        ""
+      ],
+      "DUCK01": [
+        null,
+        "African black duck",
+        "African pygmy-goose",
+        "Blue-billed teal",
+        "Cape teal",
+        ""
+      ],
+      "DUCK02": [
+        null,
+        "Egyptian goose",
+        "Knob-billed duck",
+        "Maccoa duck",
+        "South african shelduck",
+        ""
+      ],
+      "DogTest": [
+        null,
+        "Australian Shepherd",
+        "American Water Spaniel",
+        "Border Collie",
+        "Congratulations! You completed all the levels."
+      ],
+      "Dogs": [
+        null,
+        "Boxer",
+        "Bullmastiff",
+        "Mastiff",
+        "Bullmastiff",
+        ""
+      ],
+      "Footprints of species": [
+        null,
+        "Bear",
+        "Lion",
+        "Dog",
+        ""
+      ],
+      "GEESE01": [
+        null,
+        "Cape francolin",
+        "Chukar",
+        "Crested francolin",
+        "Harlequin quail",
+        ""
+      ],
+      "GEESE02": [
+        null,
+        "Indian peafowl",
+        "Natal francolin",
+        "Red-necked francolin",
+        "Cape francolin",
+        ""
+      ],
+      "Historical eras": [
+        null,
+        [
+          "19th",
+          "20th",
+          "21st"
+        ],
+        [
+          ""
+        ]
+      ],
+      "Hounds": [
+        null,
+        "Basset Hound",
+        "Beagle",
+        "Bloodhound",
+        "American Foxhound",
+        ""
+      ],
+      "Hounds_01": [
+        null,
+        "Beagle",
+        "Bloodhound",
+        "American Foxhound",
+        "Basset Hound",
+        ""
+      ],
+      "Hounds_02": [
+        null,
+        "Dachshund",
+        "Bluetick Coonhound",
+        "Black and Tan Coonhound",
+        "Plott Hound",
+        ""
+      ],
+      "Hounds_03": [
+        null,
+        "Afghan Hound",
+        "Otterhound",
+        "Basenji",
+        "Irish Wolfhound",
+        ""
+      ],
+      "Life expectancy": [
+        null,
+        [
+          "Boxer",
+          "Bull Terrier"
+        ],
+        [
+          "Silky Terrier",
+          "Bloodhound"
+        ],
+        [
+          "Pharaoh Hound",
+          "Beagle"
+        ],
+        [
+          ""
+        ]
+      ],
+      "Light twin engine": [
+        null,
+        "AS355",
+        "H135",
+        "H145",
+        "AS355",
+        "H135",
+        ""
+      ],
+      "Loaf": [
+        null,
+        "Brioche",
+        "Fougasse",
+        "Pain de campagne",
+        "Pain d'epices",
+        "Pogne de Romans",
+        "Pompe a l'huile",
+        ""
+      ],
+      "Loaf_01": [
+        null,
+        "Brioche",
+        "Fougasse",
+        "Pain de campagne",
+        "Pain d'epices",
+        ""
+      ],
+      "Loaf_02": [
+        null,
+        "Pogne de Romans",
+        "Pompe a l'huile",
+        "Fouee",
+        "Gibassier",
+        ""
+      ],
+      "Loaf_03": [
+        null,
+        "Pain au son",
+        "Boule de pain",
+        "Pain au chocolat",
+        "Croissant",
+        ""
+      ],
+      "One rope": [
+        null,
+        "Overhand Knot",
+        "Slip Knot",
+        "Figure-8 Loop",
+        "Figure-8 Knot",
+        ""
+      ],
+      "One rope applications": [
+        null,
+        "Overhand Knot",
+        "Slip Knot",
+        "Figure-8 Loop",
+        "Figure-8 Knot",
+        "Bowline Knot",
+        ""
+      ],
+      "PLOVER01": [
+        null,
+        "American golden-plover",
+        "Black-bellied plover",
+        "Blacksmith lapwing",
+        "Black-winged lapwing",
+        ""
+      ],
+      "PLOVER02": [
+        null,
+        "Caspian plover",
+        "Crowned lapwing",
+        "Lesser sand-plover",
+        "Long-toed lapwing",
+        ""
+      ],
+      "PLOVER03": [
+        null,
+        "Pacific golden-plover",
+        "Senegal lapwing",
+        "Wattled lapwing",
+        "White-headed lapwing",
+        ""
+      ],
+      "Shepherd Dog VS Others": [
+        null,
+        "Border Collie",
+        ""
+      ],
+      "Shepherd dogs": [
+        null,
+        "Australian Shepherd",
+        "Bearded Collie",
+        "Border Collie",
+        "Old English Sheepdog",
+        ""
+      ],
+      "Shepherds_01": [
+        null,
+        "Beauceron",
+        "Belgian Sheepdog",
+        "German Shepherd Dog",
+        "Icelandic Sheepdog",
+        ""
+      ],
+      "Shepherds_02": [
+        null,
+        "Bearded Collie",
+        "Border Collie",
+        "Old English Sheepdog",
+        "Australian Shepherd",
+        ""
+      ],
+      "Shepherds_03": [
+        null,
+        "Belgian Malinois",
+        "Bouvier des Flandres",
+        "Briard",
+        "Collie",
+        ""
+      ],
+      "Sighthound VS Scenthounds": [
+        null,
+        "Italian Greyhound",
+        ""
+      ],
+      "Sighthounds": [
+        null,
+        "Greyhound",
+        "Italian Greyhound",
+        "Ibizan Hound",
+        "Pharaoh Hound",
+        ""
+      ],
+      "Spaniel VS Others": [
+        null,
+        "Boykin Spaniel",
+        ""
+      ],
+      "Spaniels": [
+        null,
+        "Boykin Spaniel",
+        "American Water Spaniel",
+        "Field Spaniel",
+        "American Water Spaniel",
+        "Results:"
+      ],
+      "Terriers": [
+        null,
+        "Bull Terrier",
+        "Boston Terrier",
+        "American Staffordshire Terrier",
+        "Staffordshire Bull Terrier",
+        ""
+      ],
+      "Terriers_2": [
+        null,
+        "Cairn Terrier",
+        "Silky Terrier",
+        "Irish Terrier",
+        "Yorkshire Terrier",
+        ""
+      ]
+    },
+    "spoofGameFolders": {
+      "Africa": {
+        "North Coast": [
+          "Tunisia",
+          "Morocco",
+          "Algeria",
+          "Libya"
+        ]
+      },
+      "Dogs": {
+        "BigSmall1": [
+          "Boxer",
+          "Bull Terrier"
+        ],
+        "BigSmall2": [
+          "Silky Terrier",
+          "Bloodhound"
+        ],
+        "BigSmall3": [
+          "Pharaoh Hound",
+          "Beagle"
+        ],
+        "Dogs": [
+          "Boxer",
+          "Bullmastiff",
+          "Mastiff"
+        ],
+        "Dogs_ALL": [
+          "Beauceron",
+          "Belgian Sheepdog",
+          "German Shepherd Dog",
+          "Icelandic Sheepdog",
+          "Bearded Collie",
+          "Border Collie",
+          "Old English Sheepdog",
+          "Australian Shepherd",
+          "Belgian Malinois",
+          "Bouvier des Flandres",
+          "Briard",
+          "Collie",
+          "Beagle",
+          "Bloodhound",
+          "American Foxhound",
+          "Basset Hound",
+          "Dachshund",
+          "Bluetick Coonhound",
+          "Black and Tan Coonhound",
+          "Plott Hound",
+          "Afghan Hound",
+          "Otterhound",
+          "Basenji",
+          "Irish Wolfhound"
+        ],
+        "Hounds": [
+          "Beagle",
+          "Bloodhound",
+          "American Foxhound",
+          "Basset Hound"
+        ],
+        "Hounds_01": [
+          "Beagle",
+          "Bloodhound",
+          "American Foxhound",
+          "Basset Hound"
+        ],
+        "Hounds_02": [
+          "Dachshund",
+          "Bluetick Coonhound",
+          "Black and Tan Coonhound",
+          "Plott Hound"
+        ],
+        "Hounds_03": [
+          "Afghan Hound",
+          "Otterhound",
+          "Basenji",
+          "Irish Wolfhound"
+        ],
+        "Hounds_11": [
+          "Beagle",
+          "Otterhound",
+          "Irish Wolfhound",
+          "American Foxhound"
+        ],
+        "Hounds_12": [
+          "Afghan Hound",
+          "Bluetick Coonhound",
+          "Black and Tan Coonhound",
+          "Basenji"
+        ],
+        "Hounds_13": [
+          "Dachshund",
+          "Bloodhound",
+          "Basset Hound",
+          "Plott Hound"
+        ],
+        "Hounds_ALL": [
+          "Beagle",
+          "Bloodhound",
+          "American Foxhound",
+          "Basset Hound",
+          "Dachshund",
+          "Bluetick Coonhound",
+          "Black and Tan Coonhound",
+          "Plott Hound",
+          "Afghan Hound",
+          "Otterhound",
+          "Basenji",
+          "Irish Wolfhound"
+        ],
+        "Mastiffs": [
+          "Boxer",
+          "Bullmastiff",
+          "Mastiff"
+        ],
+        "Pointers": [
+          "German Shorthaired Pointer",
+          "German Wirehaired Pointer"
+        ],
+        "Shepherd Dog VS Others": [
+          "Boxer",
+          "Boykin Spaniel",
+          "Border Collie",
+          "Bloodhound"
+        ],
+        "Shepherd dogs": [
+          "Bearded Collie",
+          "Border Collie",
+          "Old English Sheepdog",
+          "Australian Shepherd"
+        ],
+        "Shepherd dogs_ALL": [
+          "Beauceron",
+          "Belgian Sheepdog",
+          "German Shepherd Dog",
+          "Icelandic Sheepdog",
+          "Bearded Collie",
+          "Border Collie",
+          "Old English Sheepdog",
+          "Australian Shepherd",
+          "Belgian Malinois",
+          "Bouvier des Flandres",
+          "Briard",
+          "Collie"
+        ],
+        "Shepherds_01": [
+          "Beauceron",
+          "Belgian Sheepdog",
+          "German Shepherd Dog",
+          "Icelandic Sheepdog"
+        ],
+        "Shepherds_02": [
+          "Bearded Collie",
+          "Border Collie",
+          "Old English Sheepdog",
+          "Australian Shepherd"
+        ],
+        "Shepherds_03": [
+          "Belgian Malinois",
+          "Bouvier des Flandres",
+          "Briard",
+          "Collie"
+        ],
+        "Sighthound VS Scenthounds": [
+          "Italian Greyhound",
+          "Beagle",
+          "Bloodhound",
+          "American Foxhound"
+        ],
+        "Sighthounds": [
+          "Italian Greyhound",
+          "Ibizan Hound",
+          "Pharaoh Hound",
+          "Greyhound"
+        ],
+        "Spaniel VS Others": [
+          "Boxer",
+          "Boykin Spaniel",
+          "Silky Terrier",
+          "Bull Terrier"
+        ],
+        "Spaniels": [
+          "Field Spaniel",
+          "Boykin Spaniel",
+          "American Water Spaniel"
+        ],
+        "Terriers": [
+          "Boston Terrier",
+          "American Staffordshire Terrier",
+          "Staffordshire Bull Terrier",
+          "Bull Terrier"
+        ],
+        "Terriers_2": [
+          "Silky Terrier",
+          "Irish Terrier",
+          "Yorkshire Terrier",
+          "Cairn Terrier"
+        ]
+      },
+      "French Bread": {
+        "Baguette_ALL": [
+          "Baguette classique",
+          "Ficelle",
+          "Flute",
+          "Fournee",
+          "Viennoise"
+        ],
+        "Loaf_01": [
+          "Brioche",
+          "Fougasse",
+          "Pain de campagne",
+          "Pain d'epices"
+        ],
+        "Loaf_02": [
+          "Pogne de Romans",
+          "Pompe a l'huile",
+          "Fouee",
+          "Gibassier"
+        ],
+        "Loaf_03": [
+          "Pain au son",
+          "Boule de pain",
+          "Pain au chocolat",
+          "Croissant"
+        ],
+        "Loaf_11": [
+          "Pompe a l'huile",
+          "Fougasse",
+          "Pain au chocolat",
+          "Pain d'epices"
+        ],
+        "Loaf_12": [
+          "Pain au son",
+          "Brioche",
+          "Fouee",
+          "Gibassier"
+        ],
+        "Loaf_13": [
+          "Pogne de Romans",
+          "Boule de pain",
+          "Pain de campagne",
+          "Croissant"
+        ],
+        "Loaf_ALL": [
+          "Brioche",
+          "Fougasse",
+          "Pain de campagne",
+          "Pain d'epices",
+          "Pogne de Romans",
+          "Pompe a l'huile",
+          "Fouee",
+          "Gibassier",
+          "Pain au son",
+          "Boule de pain",
+          "Pain au chocolat",
+          "Croissant"
+        ]
+      },
+      "Helicopters": {
+        "Heavy twin engine": [
+          "H215",
+          "H225"
+        ],
+        "Light twin engine": [
+          "AS355",
+          "H135",
+          "H145"
+        ],
+        "Medium twin engine": [
+          "H155",
+          "H160"
+        ]
+      },
+      "South African Birds": {
+        "DOVE01": [
+          "African green-pigeon",
+          "Laughing dove",
+          "Namaqua dove",
+          "Rameron pigeon"
+        ],
+        "DOVE02": [
+          "Red-eyed dove",
+          "Rock pigeon",
+          "Speckled pigeon",
+          "Tambourine dove"
+        ],
+        "DUCK01": [
+          "African black duck",
+          "African pygmy-goose",
+          "Blue-billed teal",
+          "Cape teal"
+        ],
+        "DUCK02": [
+          "Egyptian goose",
+          "Knob-billed duck",
+          "Maccoa duck",
+          "South african shelduck"
+        ],
+        "Ducks, geese and waterfowl_ALL": [
+          "African black duck",
+          "African pygmy-goose",
+          "Blue-billed teal",
+          "Cape teal",
+          "Egyptian goose",
+          "Knob-billed duck",
+          "Maccoa duck",
+          "South african shelduck"
+        ],
+        "GEESE01": [
+          "Cape francolin",
+          "Chukar",
+          "Crested francolin",
+          "Harlequin quail"
+        ],
+        "GEESE02": [
+          "Indian peafowl",
+          "Natal francolin",
+          "Red-necked francolin",
+          "Cape francolin"
+        ],
+        "PLOVER01": [
+          "American golden-plover",
+          "Black-bellied plover",
+          "Blacksmith lapwing",
+          "Black-winged lapwing"
+        ],
+        "PLOVER02": [
+          "Caspian plover",
+          "Crowned lapwing",
+          "Lesser sand-plover",
+          "Long-toed lapwing"
+        ],
+        "PLOVER03": [
+          "Pacific golden-plover",
+          "Senegal lapwing",
+          "Wattled lapwing",
+          "White-headed lapwing"
+        ],
+        "Pheasants, grouse and allies_ALL": [
+          "Cape francolin",
+          "Chukar",
+          "Crested francolin",
+          "Harlequin quail",
+          "Indian peafowl",
+          "Natal francolin",
+          "Red-necked francolin",
+          "Cape francolin"
+        ],
+        "Pigeons and doves_ALL": [
+          "African green-pigeon",
+          "Laughing dove",
+          "Namaqua dove",
+          "Rameron pigeon",
+          "Red-eyed dove",
+          "Rock pigeon",
+          "Speckled pigeon",
+          "Tambourine dove"
+        ],
+        "Plovers and lapwings_ALL": [
+          "American golden-plover",
+          "Black-bellied plover",
+          "Blacksmith lapwing",
+          "Black-winged lapwing",
+          "Caspian plover",
+          "Crowned lapwing",
+          "Lesser sand-plover",
+          "Long-toed lapwing",
+          "Pacific golden-plover",
+          "Senegal lapwing",
+          "Wattled lapwing",
+          "White-headed lapwing"
+        ],
+        "South African Birds_ALL": [
+          "American golden-plover",
+          "Black-bellied plover",
+          "Blacksmith lapwing",
+          "Black-winged lapwing",
+          "Caspian plover",
+          "Crowned lapwing",
+          "Lesser sand-plover",
+          "Long-toed lapwing",
+          "Pacific golden-plover",
+          "Senegal lapwing",
+          "Wattled lapwing",
+          "White-headed lapwing",
+          "African green-pigeon",
+          "Laughing dove",
+          "Namaqua dove",
+          "Rameron pigeon",
+          "Red-eyed dove",
+          "Rock pigeon",
+          "Speckled pigeon",
+          "Tambourine dove",
+          "Cape francolin",
+          "Chukar",
+          "Crested francolin",
+          "Harlequin quail",
+          "Indian peafowl",
+          "Natal francolin",
+          "Red-necked francolin",
+          "Cape francolin",
+          "African black duck",
+          "African pygmy-goose",
+          "Blue-billed teal",
+          "Cape teal",
+          "Egyptian goose",
+          "Knob-billed duck",
+          "Maccoa duck",
+          "South african shelduck"
+        ]
+      },
+      "Vegetables": {
+        "Beans": [
+          "Bean"
+        ],
+        "Flowers": [
+          "Broccoli",
+          "Cauliflower"
+        ],
+        "Fruit": [
+          "Capsicum",
+          "Bitter gourd",
+          "Bottle gourd",
+          "Brinjal",
+          "Cucumber"
+        ],
+        "Leaf": [
+          "Cabbage"
+        ],
+        "Roots": [
+          "Carrot",
+          "Potato",
+          "Radish"
+        ]
+      }
+    },
+    "spoofGameHashtags": {
+      "Africa": "Africa_id - Africa_country_of_location",
+      "Animal tracks": "Footprints of species - Animal gait from tracks",
+      "Cheeses": "Cheeses",
+      "Dogs": "Dogs - Spaniel - Boxer - Mastiff - Beagle - Terriers",
+      "Knots": "One rope - Two ropes"
+    },
+    "spoofGameMetrics": {
+      "Dogs": {
+        "Annual food cost": {
+          "American Foxhound": 0,
+          "American Staffordshire Terrier": 0,
+          "American Water Spaniel": 0,
+          "Australian Shepherd": 466,
+          "Basset Hound": 324,
+          "Beagle": 324,
+          "Bearded Collie": 0,
+          "Bloodhound": 710,
+          "Border Collie": 324,
+          "Boston Terrier": 324,
+          "Boxer": 466,
+          "Boykin Spaniel": 0,
+          "Bull Terrier": 466,
+          "Bullmastiff": 466,
+          "Cairn Terrier": 324,
+          "Field Spaniel": 0,
+          "Greyhound": 324,
+          "Ibizan Hound": 0,
+          "Irish Terrier": 0,
+          "Italian Greyhound": 324,
+          "Mastiff": 701,
+          "Old English Sheepdog": 710,
+          "Pharaoh Hound": 466,
+          "Silky Terrier": 0,
+          "Staffordshire Bull Terrier": 466,
+          "Yorkshire Terrier": 324
+        },
+        "Dog hunting situations": {
+          "American Foxhound": "Scenthounds",
+          "American Staffordshire Terrier": "Bull Terriers",
+          "American Water Spaniel": "Spaniels",
+          "Australian Shepherd": "Shepherd Dogs",
+          "Basset Hound": "Scenthounds",
+          "Beagle": "Scenthounds",
+          "Bearded Collie": "Shepherd Dogs",
+          "Bloodhound": "Scenthounds",
+          "Border Collie": "Shepherd Dogs",
+          "Boston Terrier": "Bull Terriers",
+          "Boxer": "Mastiffs",
+          "Boykin Spaniel": "Spaniels",
+          "Bull Terrier": "Bull Terriers",
+          "Bullmastiff": "Mastiffs",
+          "Cairn Terrier": "Terriers",
+          "Field Spaniel": "Spaniels",
+          "Greyhound": "Sighthounds",
+          "Ibizan Hound": "Sighthounds",
+          "Irish Terrier": "Terriers",
+          "Italian Greyhound": "Sighthounds",
+          "Mastiff": "Mastiffs",
+          "Old English Sheepdog": "Shepherd Dogs",
+          "Pharaoh Hound": "Sighthounds",
+          "Silky Terrier": "Terriers",
+          "Staffordshire Bull Terrier": "Bull Terriers",
+          "Yorkshire Terrier": "Terriers"
+        },
+        "Life expectancy": {
+          "American Foxhound": 0,
+          "American Staffordshire Terrier": 0,
+          "American Water Spaniel": 0,
+          "Australian Shepherd": 12.28,
+          "Basset Hound": 11.43,
+          "Beagle": 12.3,
+          "Bearded Collie": 12.77,
+          "Bloodhound": 6.75,
+          "Border Collie": 12.52,
+          "Boston Terrier": 10.92,
+          "Boxer": 8.81,
+          "Boykin Spaniel": 0,
+          "Bull Terrier": 10.21,
+          "Bullmastiff": 7.57,
+          "Cairn Terrier": 13.84,
+          "Field Spaniel": 9.9,
+          "Greyhound": 9.36,
+          "Ibizan Hound": 0,
+          "Irish Terrier": 0,
+          "Italian Greyhound": 10.02,
+          "Mastiff": 6.5,
+          "Old English Sheepdog": 11.19,
+          "Pharaoh Hound": 11.83,
+          "Silky Terrier": 14.25,
+          "Staffordshire Bull Terrier": 12.05,
+          "Yorkshire Terrier": 12.6
+        }
+      },
+      "Vegetables": {
+        "Growing cycle": {
+          "Bean": 0,
+          "Bitter gourd": 0,
+          "Bottle gourd": 0,
+          "Brinjal": 0,
+          "Broccoli": 0,
+          "Cabbage": 0,
+          "Capsicum": 0,
+          "Carrot": 0,
+          "Cauliflower": 0,
+          "Cucumber": 0,
+          "Potato": 0,
+          "Radish": 0
+        }
+      }
+    },
+    "spoofIncorrectTag": {
+      "Africa_country_of_location": [
+        null,
+        [
+          "Algeria"
+        ],
+        [
+          "Morocco",
+          "Algeria"
+        ],
+        [
+          "Tunisia",
+          "Morocco"
+        ],
+        [
+          "Tunisia",
+          "Algeria"
+        ],
+        [
+          "Tunisia",
+          "Morocco"
+        ],
+        [
+          ""
+        ]
+      ],
+      "Africa_id": [
+        null,
+        [
+          "Algeria"
+        ],
+        [
+          "Morocco",
+          "Algeria"
+        ],
+        [
+          "Tunisia",
+          "Morocco"
+        ],
+        [
+          "Tunisia",
+          "Algeria"
+        ],
+        [
+          "Tunisia",
+          "Morocco"
+        ],
+        [
+          ""
+        ]
+      ],
+      "Animal gait from tracks": [
+        null,
+        [
+          "LeapersHoppers"
+        ],
+        [
+          "Zigzaggers"
+        ],
+        [
+          "Waddlers",
+          "LeapersHoppers"
+        ],
+        [
+          ""
+        ]
+      ],
+      "Baguette": [
+        null,
+        [
+          "Ficelle",
+          "Flute"
+        ],
+        [
+          "Baguette classique",
+          "Flute"
+        ],
+        [
+          "Baguette classique",
+          "Fournee"
+        ],
+        [
+          "Ficelle",
+          "Fournee"
+        ],
+        [
+          "Baguette classique",
+          "Viennoise"
+        ],
+        [
+          "Ficelle",
+          "Viennoise"
+        ],
+        [
+          "Baguette classique",
+          "Flute"
+        ],
+        [
+          "Ficelle",
+          "Fournee"
+        ],
+        [
+          "Baguette classique",
+          "Viennoise"
+        ]
+      ],
+      "Cheeses": [
+        null,
+        [
+          "Roquefort"
+        ],
+        [
+          "Rochebaron"
+        ],
+        [
+          "Bleu d'Auvergne"
+        ],
+        [
+          "Rochebaron",
+          "Roquefort"
+        ],
+        [
+          ""
+        ]
+      ],
+      "Choose the right knot": [
+        null,
+        [
+          "Bowline Knot",
+          "Figure-8 Loop"
+        ],
+        [
+          "Bowline Knot",
+          "Figure-8 Loop"
+        ],
+        [
+          "Bowline Knot",
+          "Figure-8 Loop"
+        ],
+        [
+          "Reef Knot",
+          "Figure-8 Loop"
+        ],
+        [
+          "Reef Knot",
+          "Bowline Knot"
+        ]
+      ],
+      "DOVE01": [
+        null,
+        [
+          "Laughing dove",
+          "Namaqua dove",
+          "Rameron pigeon"
+        ],
+        [
+          "African green-pigeon",
+          "Namaqua dove",
+          "Rameron pigeon"
+        ],
+        [
+          "African green-pigeon",
+          "Laughing dove",
+          "Rameron pigeon"
+        ],
+        [
+          "African green-pigeon",
+          "Laughing dove",
+          "Namaqua dove"
+        ],
+        [
+          ""
+        ]
+      ],
+      "DOVE02": [
+        null,
+        [
+          "Rock pigeon",
+          "Speckled pigeon",
+          "Tambourine dove"
+        ],
+        [
+          "Red-eyed dove",
+          "Speckled pigeon",
+          "Tambourine dove"
+        ],
+        [
+          "Red-eyed dove",
+          "Rock pigeon",
+          "Tambourine dove"
+        ],
+        [
+          "Red-eyed dove",
+          "Rock pigeon",
+          "Speckled pigeon"
+        ],
+        [
+          ""
+        ]
+      ],
+      "DUCK01": [
+        null,
+        [
+          "African pygmy-goose",
+          "Blue-billed teal",
+          "Cape teal"
+        ],
+        [
+          "African black duck",
+          "Blue-billed teal",
+          "Cape teal"
+        ],
+        [
+          "African black duck",
+          "African pygmy-goose",
+          "Cape teal"
+        ],
+        [
+          "African black duck",
+          "African pygmy-goose",
+          "Blue-billed teal"
+        ],
+        [
+          ""
+        ]
+      ],
+      "DUCK02": [
+        null,
+        [
+          "Knob-billed duck",
+          "Maccoa duck",
+          "South african shelduck"
+        ],
+        [
+          "Egyptian goose",
+          "Maccoa duck",
+          "South african shelduck"
+        ],
+        [
+          "Egyptian goose",
+          "Knob-billed duck",
+          "South african shelduck"
+        ],
+        [
+          "Egyptian goose",
+          "Knob-billed duck",
+          "Maccoa duck"
+        ],
+        [
+          ""
+        ]
+      ],
+      "DogTest": [
+        null,
+        [
+          "Bearded Collie",
+          "Border Collie",
+          "Old English Sheepdog"
+        ],
+        [
+          "Boykin Spaniel"
+        ],
+        [
+          "Australian Shepherd",
+          "Bearded Collie",
+          "Old English Sheepdog"
+        ],
+        "Congratulations! You completed all the levels."
+      ],
+      "Dogs": [
+        null,
+        [
+          "Bullmastiff"
+        ],
+        [
+          "Boxer"
+        ],
+        [
+          "Bullmastiff"
+        ],
+        [
+          "Mastiff",
+          "Boxer"
+        ],
+        [
+          ""
+        ]
+      ],
+      "Footprints of species": [
+        null,
+        [
+          "Dog"
+        ],
+        [
+          "Dog"
+        ],
+        [
+          "Bear",
+          "Lion"
+        ],
+        ""
+      ],
+      "GEESE01": [
+        null,
+        [
+          "Chukar",
+          "Crested francolin",
+          "Harlequin quail"
+        ],
+        [
+          "Cape francolin",
+          "Crested francolin",
+          "Harlequin quail"
+        ],
+        [
+          "Cape francolin",
+          "Chukar",
+          "Harlequin quail"
+        ],
+        [
+          "Cape francolin",
+          "Chukar",
+          "Crested francolin"
+        ],
+        [
+          ""
+        ]
+      ],
+      "GEESE02": [
+        null,
+        [
+          "Natal francolin",
+          "Red-necked francolin",
+          "Cape francolin"
+        ],
+        [
+          "Indian peafowl",
+          "Red-necked francolin",
+          "Cape francolin"
+        ],
+        [
+          "Indian peafowl",
+          "Natal francolin",
+          "Cape francolin"
+        ],
+        [
+          "Indian peafowl",
+          "Natal francolin",
+          "Red-necked francolin"
+        ],
+        [
+          ""
+        ]
+      ],
+      "Hounds": [
+        null,
+        [
+          "Beagle",
+          "Bloodhound",
+          "American Foxhound"
+        ],
+        [
+          "Basset Hound",
+          "Bloodhound",
+          "American Foxhound"
+        ],
+        [
+          "Basset Hound",
+          "Beagle",
+          "American Foxhound"
+        ],
+        [
+          "Basset Hound",
+          "Beagle",
+          "Bloodhound"
+        ],
+        [
+          ""
+        ]
+      ],
+      "Hounds_01": [
+        null,
+        [
+          "Bloodhound",
+          "American Foxhound"
+        ],
+        [
+          "Basset Hound",
+          "Beagle"
+        ],
+        [
+          "Beagle",
+          "Basset Hound"
+        ],
+        [
+          "American Foxhound",
+          "Bloodhound"
+        ],
+        [
+          ""
+        ]
+      ],
+      "Hounds_02": [
+        null,
+        [
+          "Bluetick Coonhound",
+          "Black and Tan Coonhound"
+        ],
+        [
+          "Plott Hound",
+          "Dachshund"
+        ],
+        [
+          "Dachshund",
+          "Plott Hound"
+        ],
+        [
+          "Black and Tan Coonhound",
+          "Bluetick Coonhound"
+        ],
+        [
+          ""
+        ]
+      ],
+      "Hounds_03": [
+        null,
+        [
+          "Otterhound",
+          "Basenji"
+        ],
+        [
+          "Irish Wolfhound",
+          "Afghan Hound"
+        ],
+        [
+          "Afghan Hound",
+          "Irish Wolfhound"
+        ],
+        [
+          "Basenji",
+          "Otterhound"
+        ],
+        [
+          ""
+        ]
+      ],
+      "Life expectancy": [
+        null,
+        [
+          ""
+        ],
+        [
+          ""
+        ],
+        [
+          ""
+        ]
+      ],
+      "Light twin engine": [
+        null,
+        [
+          "H135",
+          "H145"
+        ],
+        [
+          "AS355",
+          "H145"
+        ],
+        [
+          "AS355",
+          "H135"
+        ],
+        [
+          "H135",
+          "H145"
+        ],
+        [
+          "AS355",
+          "H135"
+        ],
+        [
+          "AS355",
+          "H135"
+        ]
+      ],
+      "Loaf": [
+        null,
+        [
+          "Fougasse",
+          "Pain de campagne"
+        ],
+        [
+          "Pogne de Romans",
+          "Pain de campagne"
+        ],
+        [
+          "Brioche",
+          "Pogne de Romans"
+        ],
+        [
+          "Pain de campagne",
+          "Pogne de Romans"
+        ],
+        [
+          "Brioche",
+          "Pain d'epices"
+        ],
+        [
+          "Pain de campagne",
+          "Pain d'epices"
+        ],
+        [
+          "Fougasse",
+          "Pompe a l'huile"
+        ]
+      ],
+      "Loaf_01": [
+        null,
+        [
+          "Fougasse",
+          "Pain de campagne"
+        ],
+        [
+          "Brioche",
+          "Pain de campagne"
+        ],
+        [
+          "Brioche",
+          "Fougasse"
+        ],
+        [
+          "Brioche",
+          "Pain d'epices"
+        ],
+        [
+          ""
+        ]
+      ],
+      "Loaf_02": [
+        null,
+        [
+          "Pompe a l'huile",
+          "Fouee"
+        ],
+        [
+          "Gibassier",
+          "Pogne de Romans"
+        ],
+        [
+          "Pogne de Romans",
+          "Gibassier"
+        ],
+        [
+          "Fouee",
+          "Pompe a l'huile"
+        ],
+        [
+          ""
+        ]
+      ],
+      "Loaf_03": [
+        null,
+        [
+          "Boule de pain",
+          "Pain au chocolat"
+        ],
+        [
+          "Pain au son",
+          "Pain au chocolat"
+        ],
+        [
+          "Pain au chocolat",
+          "Pain au son"
+        ],
+        [
+          "Pain au son",
+          "Boule de pain"
+        ],
+        [
+          ""
+        ]
+      ],
+      "One rope": [
+        null,
+        [
+          "Slip Knot",
+          "Figure-8 Loop",
+          "Figure-8 Knot"
+        ],
+        [
+          "Overhand Knot",
+          "Figure-8 Loop",
+          "Figure-8 Knot"
+        ],
+        [
+          "Overhand Knot",
+          "Slip Knot",
+          "Figure-8 Knot"
+        ],
+        [
+          "Overhand Knot",
+          "Slip Knot",
+          "Figure-8 Loop"
+        ],
+        [
+          ""
+        ]
+      ],
+      "One rope applications": [
+        null,
+        [
+          "Slip Knot",
+          "Bowline Knot",
+          "Figure-8 Loop",
+          "Figure-8 Knot"
+        ],
+        [
+          "Overhand Knot",
+          "Figure-8 Loop",
+          "Figure-8 Knot",
+          "Bowline Knot"
+        ],
+        [
+          "Overhand Knot",
+          "Slip Knot",
+          "Figure-8 Knot",
+          "Bowline Knot"
+        ],
+        [
+          "Overhand Knot",
+          "Slip Knot",
+          "Figure-8 Loop",
+          "Bowline Knot"
+        ],
+        [
+          "Overhand Knot",
+          "Slip Knot",
+          "Figure-8 Loop",
+          "Figure-8 Knot"
+        ],
+        [
+          ""
+        ]
+      ],
+      "PLOVER01": [
+        null,
+        [
+          "Black-bellied plover",
+          "Blacksmith lapwing",
+          "Black-winged lapwing",
+          ""
+        ],
+        [
+          "American golden-plover",
+          "Blacksmith lapwing",
+          "Black-winged lapwing",
+          ""
+        ],
+        [
+          "American golden-plover",
+          "Black-bellied plover",
+          "Black-winged lapwing",
+          ""
+        ],
+        [
+          "American golden-plover",
+          "Black-bellied plover",
+          "Blacksmith lapwing",
+          ""
+        ],
+        [
+          ""
+        ]
+      ],
+      "PLOVER02": [
+        null,
+        [
+          "Crowned lapwing",
+          "Lesser sand-plover",
+          "Long-toed lapwing"
+        ],
+        [
+          "Caspian plover",
+          "Lesser sand-plover",
+          "Long-toed lapwing"
+        ],
+        [
+          "Caspian plover",
+          "Crowned lapwing",
+          "Long-toed lapwing"
+        ],
+        [
+          "Caspian plover",
+          "Crowned lapwing",
+          "Lesser sand-plover"
+        ],
+        [
+          ""
+        ]
+      ],
+      "PLOVER03": [
+        null,
+        [
+          "Senegal lapwing",
+          "Wattled lapwing",
+          "White-headed lapwing"
+        ],
+        [
+          "Pacific golden-plover",
+          "Wattled lapwing",
+          "White-headed lapwing"
+        ],
+        [
+          "Pacific golden-plover",
+          "Senegal lapwing",
+          "White-headed lapwing"
+        ],
+        [
+          "Pacific golden-plover",
+          "Senegal lapwing",
+          "Wattled lapwing"
+        ],
+        [
+          ""
+        ]
+      ],
+      "Shepherd Dog VS Others": [
+        null,
+        [
+          "Boxer",
+          "Boykin Spaniel",
+          "Bloodhound"
+        ],
+        [
+          ""
+        ]
+      ],
+      "Shepherd dogs": [
+        null,
+        [
+          "Bearded Collie",
+          "Border Collie",
+          "Old English Sheepdog"
+        ],
+        [
+          "Australian Shepherd",
+          "Border Collie",
+          "Old English Sheepdog"
+        ],
+        [
+          "Australian Shepherd",
+          "Bearded Collie",
+          "Old English Sheepdog"
+        ],
+        [
+          "Australian Shepherd",
+          "Bearded Collie",
+          "Border Collie"
+        ],
+        [
+          ""
+        ]
+      ],
+      "Shepherds_01": [
+        null,
+        [
+          "Belgian Sheepdog",
+          "German Shepherd Dog"
+        ],
+        [
+          "Beauceron",
+          "Icelandic Sheepdog"
+        ],
+        [
+          "Icelandic Sheepdog",
+          "Beauceron"
+        ],
+        [
+          "German Shepherd Dog",
+          "Belgian Sheepdog"
+        ],
+        [
+          ""
+        ]
+      ],
+      "Shepherds_02": [
+        null,
+        [
+          "Border Collie",
+          "Old English Sheepdog"
+        ],
+        [
+          "Australian Shepherd",
+          "Bearded Collie"
+        ],
+        [
+          "Bearded Collie",
+          "Australian Shepherd"
+        ],
+        [
+          "Old English Sheepdog",
+          "Border Collie"
+        ],
+        [
+          ""
+        ]
+      ],
+      "Shepherds_03": [
+        null,
+        [
+          "Bouvier des Flandres",
+          "Briard"
+        ],
+        [
+          "Collie",
+          "Belgian Malinois"
+        ],
+        [
+          "Belgian Malinois",
+          "Collie"
+        ],
+        [
+          "Briard",
+          "Bouvier des Flandres"
+        ],
+        [
+          ""
+        ]
+      ],
+      "Sighthound VS Scenthounds": [
+        null,
+        [
+          "Beagle",
+          "Bloodhound",
+          "American Foxhound"
+        ],
+        [
+          ""
+        ]
+      ],
+      "Sighthounds": [
+        null,
+        [
+          "Italian Greyhound",
+          "Ibizan Hound",
+          "Pharaoh Hound"
+        ],
+        [
+          "Greyhound",
+          "Ibizan Hound",
+          "Pharaoh Hound"
+        ],
+        [
+          "Greyhound",
+          "Italian Greyhound",
+          "Pharaoh Hound"
+        ],
+        [
+          "Greyhound",
+          "Italian Greyhound",
+          "Ibizan Hound"
+        ],
+        [
+          ""
+        ]
+      ],
+      "Spaniel VS Others": [
+        null,
+        [
+          "Boxer",
+          "Silky Terrier",
+          "Bull Terrier"
+        ],
+        [
+          ""
+        ]
+      ],
+      "Spaniels": [
+        null,
+        [
+          "Field Spaniel"
+        ],
+        [
+          "Boykin Spaniel"
+        ],
+        [
+          "American Water Spaniel"
+        ],
+        [
+          "Field Spaniel",
+          "Boykin Spaniel"
+        ],
+        [
+          ""
+        ]
+      ],
+      "Terriers": [
+        null,
+        [
+          "Boston Terrier",
+          "American Staffordshire Terrier",
+          "Staffordshire Bull Terrier"
+        ],
+        [
+          "Bull Terrier",
+          "American Staffordshire Terrier",
+          "Staffordshire Bull Terrier"
+        ],
+        [
+          "Bull Terrier",
+          "Boston Terrier",
+          "Staffordshire Bull Terrier"
+        ],
+        [
+          "Bull Terrier",
+          "Boston Terrier",
+          "American Staffordshire Terrier"
+        ],
+        [
+          ""
+        ]
+      ],
+      "Terriers_2": [
+        null,
+        [
+          "Silky Terrier",
+          "Irish Terrier",
+          "Yorkshire Terrier"
+        ],
+        [
+          "Cairn Terrier",
+          "Irish Terrier",
+          "Yorkshire Terrier"
+        ],
+        [
+          "Cairn Terrier",
+          "Silky Terrier",
+          "Yorkshire Terrier"
+        ],
+        [
+          "Cairn Terrier",
+          "Silky Terrier",
+          "Irish Terrier"
+        ],
+        [
+          ""
+        ]
+      ]
+    },
+    "spoofInstructions": {
+      "Africa_country_of_location": [
+        null,
+        "First, let's identify Morocco.",
+        "Then Tunisia.",
+        "Now Algeria",
+        "Now Libya",
+        "Finally: Algeria",
+        "Game complete!"
+      ],
+      "Africa_id": [
+        null,
+        "First, let's identify Morocco.",
+        "Then Tunisia.",
+        "Now Algeria",
+        "Now Libya",
+        "Finally: Algeria",
+        "Game complete!"
+      ],
+      "Animal gait from tracks": [
+        null,
+        "First, let's identify waddlers.",
+        "Then leapers and hoppers.",
+        "Now for zig zaggers.",
+        "That was the easier stage. Are you ready for the next level?"
+      ],
+      "Baguette": [
+        null,
+        "Find the Baguette classique.",
+        "Locate the Ficelle.",
+        "Identify the Flute.",
+        "Can you find the Fournee?",
+        "Can you find the Viennoise?",
+        "Now, locate the Baguette classique.",
+        "Try to find the Ficelle.",
+        "Great! Now, identify the Viennoise.",
+        "Game complete!"
+      ],
+      "Cheeses": [
+        null,
+        "First, let's find the Rochebaron.",
+        "We now look at the Bleu d'Auvergne.",
+        "Can you tell which is the Roquefort?",
+        "Test your knowledge: find the Bleu d'Auvergne."
+      ],
+      "Choose the right knot": [
+        null,
+        "Ribbon for a present.",
+        "A head bandage out of a cloth.",
+        "Tying flintwood together.",
+        "Anchoring around a tree trunk.",
+        "Between fishing line and fishing hook.",
+        "Game complete!"
+      ],
+      "DOVE01": [
+        null,
+        "Find the African green-pigeon.",
+        "Locate the Laughing dove.",
+        "Identify the Namaqua dove.",
+        "Can you find the Rameron pigeon?",
+        "Game complete!"
+      ],
+      "DOVE02": [
+        null,
+        "Find the Red-eyed dove.",
+        "Locate the Rock pigeon.",
+        "Identify the Speckled pigeon.",
+        "Can you find the Tambourine dove?",
+        "Game complete!"
+      ],
+      "DUCK01": [
+        null,
+        "Find the African black duck.",
+        "Locate the African pygmy-goose.",
+        "Identify the Blue-billed teal.",
+        "Can you find the Cape teal?",
+        "Game complete!"
+      ],
+      "DUCK02": [
+        null,
+        "Find the Egyptian goose.",
+        "Locate the Knob-billed duck.",
+        "Identify the Maccoa duck.",
+        "Can you find the South african shelduck?",
+        "Game complete!"
+      ],
+      "Dog hunting situations": [
+        null,
+        "Environment 1.",
+        "Environment 2.",
+        ""
+      ],
+      "DogTest": [
+        null,
+        "Level 1: Find all the Australian Shepherds.",
+        "We now look at the American Water Spaniel.",
+        "Where is the Border Collie?",
+        "Congratulations! You completed all the levels."
+      ],
+      "Dogs": [
+        null,
+        "Level 1: Find all the Boxers.",
+        "Level 2: Find the Bullmastiffs",
+        "Level 3: Where is the English Mastiff?",
+        "Nice work, ready for the next level?"
+      ],
+      "Footprints of species": [
+        null,
+        "First, let's look for bear tracks.",
+        "Can you identify the lion tracks?",
+        "Now for finding the Dog tracks.",
+        "Are you ready for the next level?"
+      ],
+      "GEESE01": [
+        null,
+        "Find the Cape francolin.",
+        "Locate the Chukar.",
+        "Identify the Crested francolin.",
+        "Can you find the Harlequin quail?",
+        "Game complete!"
+      ],
+      "GEESE02": [
+        null,
+        "Find the Indian peafowl.",
+        "Locate the Natal francolin.",
+        "Identify the Red-necked francolin.",
+        "Can you find the Cape francolin?",
+        "Game complete!"
+      ],
+      "Historical eras": [
+        null,
+        "Order inventions from most ancient to most recent.",
+        "Game complete!"
+      ],
+      "Hounds": [
+        null,
+        "First, let's find the Basset Hounds.",
+        "We now look at the Beagles.",
+        "Can you tell which is the Bloodhound?",
+        "Test your knowledge: find the American Foxhound.",
+        "Done with the Hounds."
+      ],
+      "Hounds_01": [
+        null,
+        "Find the Beagle.",
+        "Locate the Bloodhound.",
+        "Identify the American Foxhound.",
+        "Can you find the Basset Hound?",
+        "Game complete!"
+      ],
+      "Hounds_02": [
+        null,
+        "Find the Dachshund.",
+        "Locate the Bluetick Coonhound.",
+        "Identify the Black and Tan Coonhound.",
+        "Can you find the Plott Hound?",
+        "Game complete!"
+      ],
+      "Hounds_03": [
+        null,
+        "Find the Afghan Hound.",
+        "Locate the Otterhound.",
+        "Identify the Basenji.",
+        "Can you find the Irish Wolfhound?",
+        "Game complete!"
+      ],
+      "Life expectancy": [
+        null,
+        "Order by life expectancy.",
+        "Order by life expectancy (2).",
+        "Order by life expectancy (3)",
+        "Congratulations! You completed all the levels."
+      ],
+      "Light twin engine": [
+        null,
+        "Find the AS355.",
+        "Locate the H135.",
+        "Identify the H145.",
+        "Can you find the AS355?",
+        "Can you find the H135?",
+        "Game complete!"
+      ],
+      "Loaf": [
+        null,
+        "Find the Brioche.",
+        "Locate the Fougasse.",
+        "Identify the Pain de campagne.",
+        "Can you find the Pain d'epices?",
+        "Can you find the Pogne de Romans?",
+        "Can you find the Pompe a l'huile?",
+        "Game complete!"
+      ],
+      "Loaf_01": [
+        null,
+        "Find the Brioche.",
+        "Locate the Fougasse.",
+        "Identify the Pain de campagne.",
+        "Can you find the Pain d'epices?",
+        "Game complete!"
+      ],
+      "Loaf_02": [
+        null,
+        "Find the Pogne de Romans.",
+        "Locate the Pompe a l'huile.",
+        "Identify the Fouee.",
+        "Can you find the Gibassier?",
+        "Game complete!"
+      ],
+      "Loaf_03": [
+        null,
+        "Find the Pain au son.",
+        "Locate the Boule de pain.",
+        "Identify the Pain au chocolat.",
+        "Can you find the Croissant?",
+        "Game complete!"
+      ],
+      "One rope": [
+        null,
+        "Level 1: Find the Overhand Knot.",
+        "Level 2: Locate the Slip Knot.",
+        "Level 3: Identify the Figure-8 Loop.",
+        "Level 4: Can you find the Figure-8 Knot?",
+        "Game complete!"
+      ],
+      "One rope applications": [
+        null,
+        "Find the Overhand Knot.",
+        "Locate the Slip Knot.",
+        "Identify the Figure-8 Loop.",
+        "Can you find the Figure-8 Knot?",
+        "Can you find the Bowline Knot?",
+        "Game complete!"
+      ],
+      "PLOVER01": [
+        null,
+        "Find the American golden-plover.",
+        "Locate the Black-bellied plover.",
+        "Identify the Blacksmith lapwing.",
+        "Can you find the Black-winged lapwing?",
+        "Game complete!"
+      ],
+      "PLOVER02": [
+        null,
+        "Find the Caspian plover.",
+        "Locate the Crowned lapwing.",
+        "Identify the Lesser sand-plover.",
+        "Can you find the Long-toed lapwing?",
+        "Game complete!"
+      ],
+      "PLOVER03": [
+        null,
+        "Find the Pacific golden-plover.",
+        "Locate the Senegal lapwing.",
+        "Identify the Wattled lapwing.",
+        "Can you find the White-headed lapwing?",
+        "Game complete!"
+      ],
+      "Shepherd Dog VS Others": [
+        null,
+        "The sheep have broken through the fence and they are dispersing.",
+        ""
+      ],
+      "Shepherd dogs": [
+        null,
+        "Level 1: Find all the Australian Shepherds.",
+        "Level 2: Find the Bearded Collies.",
+        "Level 3: Where is the Border Collie?",
+        "Nice work! Can you locate the Old English Sheepdog?",
+        "Congratulations! You completed all the levels."
+      ],
+      "Shepherds_01": [
+        null,
+        "Find the Beauceron.",
+        "Locate the Belgian Sheepdog.",
+        "Identify the German Shepherd Dog.",
+        "Can you find the Icelandic Sheepdog?",
+        "Game complete!"
+      ],
+      "Shepherds_02": [
+        null,
+        "Find the Bearded Collie.",
+        "Locate the Border Collie.",
+        "Identify the Old English Sheepdog.",
+        "Can you find the Australian Shepherd?",
+        "Game complete!"
+      ],
+      "Shepherds_03": [
+        null,
+        "Find the Belgian Malinois.",
+        "Locate the Bouvier des Flandres.",
+        "Identify the Briard.",
+        "Can you find the Collie?",
+        "Game complete!"
+      ],
+      "Sighthound VS Scenthounds": [
+        null,
+        "Wide open fields. A deer in the distance.",
+        ""
+      ],
+      "Sighthounds": [
+        null,
+        "Level 1: Find all the Greyhounds.",
+        "Level 2: Find the Italian Greyhounds.",
+        "Level 3: Where is the Ibizan Hound?",
+        "Nice work! Can you locate the Pharaoh Hound?",
+        "Congratulations! You completed all the levels."
+      ],
+      "Spaniel VS Others": [
+        null,
+        "Moles are damaging the vineyard.",
+        ""
+      ],
+      "Spaniels": [
+        null,
+        "First, let's find the Boykin Spaniel.",
+        "We now look at the American Water Spaniel.",
+        "Can you tell which is the Field Spaniel?",
+        "Test your knowledge: find the American water spaniel."
+      ],
+      "Terriers": [
+        null,
+        "First, let's find the Bull Terriers.",
+        "We now look at the Boston Terriers.",
+        "Can you tell which is the American Staffordshire Terrier?",
+        "Test your knowledge: find the Staffordshire Bull Terrier.",
+        "Nice work! Ready for the next level?"
+      ],
+      "Terriers_2": [
+        null,
+        "Level 1: Find all the Cairn Terriers.",
+        "Level 2: Find the Silky Terriers.",
+        "Level 3: Where is the Irish Terrier?",
+        "Nice work! Can you locate the Yorkshire Terrier?",
+        "Congratulations! You completed all the levels."
+      ]
+    },
+    "spoofMacroGameSets": {
+      "Cereal": {
+        "Straddlers": [
+          null,
+          [
+            "Hounds_03",
+            "Home",
+            "Dogs",
+            1
+          ],
+          [
+            "Hounds_02",
+            "Home",
+            "Dogs",
+            1
+          ],
+          [
+            "Hounds_01",
+            "Home",
+            "Dogs",
+            1
+          ]
+        ],
+        "Waddlers": [
+          null,
+          [
+            "Hounds_03",
+            "Home",
+            "Dogs",
+            1
+          ],
+          [
+            "Hounds_02",
+            "Home",
+            "Dogs",
+            1
+          ],
+          [
+            "Hounds_01",
+            "Home",
+            "Dogs",
+            1
+          ]
+        ]
+      },
+      "Cheeses": {
+        "Cow": [
+          null,
+          [
+            "Hounds_03",
+            "Home",
+            "Dogs",
+            1
+          ],
+          [
+            "Hounds_02",
+            "Home",
+            "Dogs",
+            1
+          ],
+          [
+            "Hounds_01",
+            "Home",
+            "Dogs",
+            1
+          ]
+        ],
+        "Goat": [
+          null,
+          [
+            "Hounds_03",
+            "Home",
+            "Dogs",
+            1
+          ],
+          [
+            "Hounds_02",
+            "Home",
+            "Dogs",
+            1
+          ],
+          [
+            "Hounds_01",
+            "Home",
+            "Dogs",
+            1
+          ]
+        ]
+      },
+      "Dogs": {
+        "Hounds": [
+          null,
+          [
+            "Hounds_03",
+            "Home",
+            "Dogs",
+            1
+          ],
+          [
+            "Hounds_02",
+            "Home",
+            "Dogs",
+            1
+          ],
+          [
+            "Hounds_01",
+            "Home",
+            "Dogs",
+            1
+          ]
+        ],
+        "Shepherd dogs": [
+          null,
+          [
+            "Shepherds_02",
+            "Home",
+            "Dogs",
+            4
+          ],
+          [
+            "Shepherds_02",
+            "Home",
+            "Dogs",
+            1
+          ],
+          [
+            "Shepherds_01",
+            "Home",
+            "Dogs",
+            2
+          ]
+        ]
+      },
+      "Footprints": {
+        "Straddlers": [
+          null,
+          [
+            "Hounds_03",
+            "Home",
+            "Dogs",
+            1
+          ],
+          [
+            "Hounds_02",
+            "Home",
+            "Dogs",
+            1
+          ],
+          [
+            "Hounds_01",
+            "Home",
+            "Dogs",
+            1
+          ]
+        ],
+        "Waddlers": [
+          null,
+          [
+            "Hounds_03",
+            "Home",
+            "Dogs",
+            1
+          ],
+          [
+            "Hounds_02",
+            "Home",
+            "Dogs",
+            1
+          ],
+          [
+            "Hounds_01",
+            "Home",
+            "Dogs",
+            1
+          ]
+        ]
+      },
+      "French Bread": {
+        "Loaf": [
+          null,
+          [
+            "Loaf_01",
+            "Home",
+            "French Bread",
+            1
+          ],
+          [
+            "Loaf_02",
+            "Home",
+            "French Bread",
+            1
+          ],
+          [
+            "Loaf_03",
+            "Home",
+            "French Bread",
+            1
+          ]
+        ]
+      },
+      "South African Birds": {
+        "Ducks, geese and waterfowl": [
+          null,
+          [
+            "DUCK01",
+            "Home",
+            "South African Birds",
+            1
+          ],
+          [
+            "DUCK02",
+            "Home",
+            "South African Birds",
+            1
+          ]
+        ],
+        "Pheasants, grouse and allies": [
+          null,
+          [
+            "GEESE01",
+            "Home",
+            "South African Birds",
+            1
+          ],
+          [
+            "GEESE02",
+            "Home",
+            "South African Birds",
+            1
+          ]
+        ],
+        "Pigeons and doves": [
+          null,
+          [
+            "DOVE01",
+            "Home",
+            "South African Birds",
+            1
+          ],
+          [
+            "DOVE02",
+            "Home",
+            "South African Birds",
+            1
+          ]
+        ],
+        "Plovers and lapwings": [
+          null,
+          [
+            "PLOVER01",
+            "Home",
+            "South African Birds",
+            1
+          ],
+          [
+            "PLOVER02",
+            "Home",
+            "South African Birds",
+            1
+          ],
+          [
+            "PLOVER03",
+            "Home",
+            "South African Birds",
+            1
+          ]
+        ]
+      },
+      "Vegetables": {
+        "Legumes": [
+          null,
+          [
+            "Hounds_03",
+            "Home",
+            "Dogs",
+            1
+          ],
+          [
+            "Hounds_02",
+            "Home",
+            "Dogs",
+            1
+          ],
+          [
+            "Hounds_01",
+            "Home",
+            "Dogs",
+            1
+          ]
+        ],
+        "Roots": [
+          null,
+          [
+            "Hounds_03",
+            "Home",
+            "Dogs",
+            1
+          ],
+          [
+            "Hounds_02",
+            "Home",
+            "Dogs",
+            1
+          ],
+          [
+            "Hounds_01",
+            "Home",
+            "Dogs",
+            1
+          ]
+        ]
+      }
+    },
+    "spoofReleaseStatus": {
+      "Dogs": {
+        "released": 1,
+        "visible": 1
+      },
+      "Footprints": {
+        "released": 0,
+        "visible": 1
+      },
+      "French Bread": {
+        "released": 1,
+        "visible": 1
+      },
+      "South African Birds": {
+        "released": 1,
+        "visible": 1
+      },
+      "Vegetables": {
+        "released": 0,
+        "visible": 1
+      }
+    },
+    "spoofUnits": {
+      "Growing cycle": "months",
+      "Life expectancy": "years",
+      "Population (2022)": "million"
+    }
+  },
+  "userdata": {
+    "YNSE4zJ8DFbrnRgDGzeBVF1gZCW2": {
+      "Dogs": {
+        "Hounds": {
+          "accuracy": [
+            null,
+            {
+              "1695223778002": {
+                "correct": 0.5714285714285714,
+                "time": "20/9@17:29"
+              }
+            }
+          ],
+          "latestLevel": {
+            "folder": "Dogs",
+            "gameName": "Afghan Hound",
+            "gameSetLevel": 1,
+            "levelGrouping": "Hounds_03",
+            "macroName": "Hounds"
+          }
+        },
+        "tags": {
+          "Afghan Hound": {
+            "1695223765370": {
+              "correct": 1,
+              "time": "20/9@17:29"
+            }
+          },
+          "Basenji": {
+            "1695223775279": {
+              "correct": 0.6666666666666666,
+              "time": "20/9@17:29"
+            }
+          },
+          "Irish Wolfhound": {
+            "1695223776027": {
+              "correct": 0.5714285714285714,
+              "time": "20/9@17:29"
+            }
+          },
+          "Otterhound": {
+            "1695223772863": {
+              "correct": 0.6,
+              "time": "20/9@17:29"
+            }
+          }
+        }
+      }
+    },
+    "frEyzMigSIVNGfkRzu9phdeTdJf1": {
+      "Dogs": {
+        "Hounds": {
+          "accuracy": [
+            null,
+            {
+              "1695623333187": {
+                "correct": 0.4117647058823529,
+                "time": "25/9@14:28"
+              },
+              "1698743571117": {
+                "correct": 0.42857142857142855,
+                "time": "31/10@9:12"
+              },
+              "1698745891797": {
+                "correct": 0.3333333333333333,
+                "time": "31/10@17:51"
+              },
+              "1704071237489": {
+                "correct": 0.7272727272727273,
+                "time": "1/1@2:7"
+              }
+            }
+          ],
+          "latestLevel": {
+            "folder": "Dogs",
+            "gameName": "Afghan Hound",
+            "gameSetLevel": 1,
+            "levelGrouping": "Hounds_03",
+            "macroName": "Hounds"
+          }
+        },
+        "Shepherd dogs": {
+          "accuracy": [
+            null,
+            {
+              "1698743397983": {
+                "correct": 0,
+                "time": "31/10@9:9"
+              },
+              "1698746364194": {
+                "correct": 0.4,
+                "time": "31/10@17:59"
+              }
+            },
+            {
+              "1698743422247": {
+                "correct": 0.5714285714285714,
+                "time": "31/10@9:10"
+              }
+            }
+          ],
+          "latestLevel": {
+            "folder": "Dogs",
+            "gameName": "Bearded Collie",
+            "gameSetLevel": 1,
+            "levelGrouping": "Shepherds_02",
+            "macroName": "Shepherd dogs"
+          }
+        },
+        "tags": {
+          "Afghan Hound": {
+            "1695623321621": {
+              "correct": 0.6666666666666666,
+              "time": "25/9@14:28"
+            },
+            "1698743350436": {
+              "correct": 0.2,
+              "time": "31/10@9:9"
+            },
+            "1698743543360": {
+              "correct": 0.2,
+              "time": "31/10@9:12"
+            },
+            "1698743611323": {
+              "correct": 1,
+              "time": "31/10@9:13"
+            },
+            "1698745827735": {
+              "correct": 0.6666666666666666,
+              "time": "31/10@17:50"
+            }
+          },
+          "American Foxhound": {
+            "1704071225344": {
+              "correct": 0.6666666666666666,
+              "time": "1/1@2:7"
+            }
+          },
+          "Australian Shepherd": {
+            "1698743392227": {
+              "correct": 0,
+              "time": "31/10@9:9"
+            },
+            "1698743418855": {
+              "correct": 0.5714285714285714,
+              "time": "31/10@9:10"
+            },
+            "1698746357362": {
+              "correct": 0.4,
+              "time": "31/10@17:59"
+            }
+          },
+          "Basenji": {
+            "1695623325363": {
+              "correct": 0.4,
+              "time": "25/9@14:28"
+            },
+            "1698743361769": {
+              "correct": 0.3333333333333333,
+              "time": "31/10@9:9"
+            },
+            "1698743552677": {
+              "correct": 0.42857142857142855,
+              "time": "31/10@9:12"
+            },
+            "1698743637639": {
+              "correct": 0.6,
+              "time": "31/10@9:13"
+            },
+            "1698745887715": {
+              "correct": 0.35294117647058826,
+              "time": "31/10@17:51"
+            }
+          },
+          "Basset Hound": {
+            "1704071233097": {
+              "correct": 0.7272727272727273,
+              "time": "1/1@2:7"
+            }
+          },
+          "Beagle": {
+            "1704071208056": {
+              "correct": 0.4,
+              "time": "1/1@2:6"
+            }
+          },
+          "Bearded Collie": {
+            "1698743404129": {
+              "correct": 0,
+              "time": "31/10@9:10"
+            }
+          },
+          "Black and Tan Coonhound": {
+            "1698743598465": {
+              "correct": 0.25,
+              "time": "31/10@9:13"
+            }
+          },
+          "Bloodhound": {
+            "1704071214041": {
+              "correct": 0.5714285714285714,
+              "time": "1/1@2:6"
+            }
+          },
+          "Bluetick Coonhound": {
+            "1698743589951": {
+              "correct": 0.3333333333333333,
+              "time": "31/10@9:13"
+            }
+          },
+          "Border Collie": {
+            "1698743409901": {
+              "correct": 0.6666666666666666,
+              "time": "31/10@9:10"
+            }
+          },
+          "Dachshund": {
+            "1698743584754": {
+              "correct": 0.5,
+              "time": "31/10@9:13"
+            }
+          },
+          "Irish Wolfhound": {
+            "1695623325702": {
+              "correct": 0.4117647058823529,
+              "time": "25/9@14:28"
+            },
+            "1698743370260": {
+              "correct": 0.391304347826087,
+              "time": "31/10@9:9"
+            },
+            "1698743569507": {
+              "correct": 0.42857142857142855,
+              "time": "31/10@9:12"
+            },
+            "1698743652535": {
+              "correct": 0.47058823529411764,
+              "time": "31/10@9:14"
+            },
+            "1698745890498": {
+              "correct": 0.3333333333333333,
+              "time": "31/10@17:51"
+            }
+          },
+          "Old English Sheepdog": {
+            "1698743414672": {
+              "correct": 0.75,
+              "time": "31/10@9:10"
+            }
+          },
+          "Otterhound": {
+            "1695623324146": {
+              "correct": 0.4,
+              "time": "25/9@14:28"
+            },
+            "1698743355644": {
+              "correct": 0.2857142857142857,
+              "time": "31/10@9:9"
+            },
+            "1698743547622": {
+              "correct": 0.3333333333333333,
+              "time": "31/10@9:12"
+            },
+            "1698743628653": {
+              "correct": 0.42857142857142855,
+              "time": "31/10@9:13"
+            },
+            "1698745881380": {
+              "correct": 0.26666666666666666,
+              "time": "31/10@17:51"
+            }
+          },
+          "Plott Hound": {
+            "1698743613460": {
+              "correct": 0.3076923076923077,
+              "time": "31/10@9:13"
+            }
+          }
+        }
+      },
+      "French Bread": {
+        "Loaf": {
+          "accuracy": [
+            null,
+            {
+              "1698743738014": {
+                "correct": 0.4,
+                "time": "31/10@9:15"
+              },
+              "1698745768888": {
+                "correct": 0.5,
+                "time": "31/10@17:49"
+              }
+            }
+          ],
+          "latestLevel": {
+            "folder": "French Bread",
+            "gameName": "Brioche",
+            "gameSetLevel": 1,
+            "levelGrouping": "Loaf_01",
+            "macroName": "Loaf"
+          }
+        },
+        "tags": {
+          "Brioche": {
+            "1698743441781": {
+              "correct": 1,
+              "time": "31/10@9:10"
+            },
+            "1698743718690": {
+              "correct": 0,
+              "time": "31/10@9:15"
+            },
+            "1698745747378": {
+              "correct": 0.5,
+              "time": "31/10@17:49"
+            }
+          },
+          "Fougasse": {
+            "1698743446039": {
+              "correct": 0.5,
+              "time": "31/10@9:10"
+            },
+            "1698743723467": {
+              "correct": 0.3333333333333333,
+              "time": "31/10@9:15"
+            },
+            "1698745753395": {
+              "correct": 0.75,
+              "time": "31/10@17:49"
+            }
+          },
+          "Pain d'epices": {
+            "1698743454242": {
+              "correct": 0.3333333333333333,
+              "time": "31/10@9:10"
+            },
+            "1698743733955": {
+              "correct": 0.4,
+              "time": "31/10@9:15"
+            },
+            "1698745766917": {
+              "correct": 0.5,
+              "time": "31/10@17:49"
+            }
+          },
+          "Pain de campagne": {
+            "1698743449695": {
+              "correct": 0.3333333333333333,
+              "time": "31/10@9:10"
+            },
+            "1698743730283": {
+              "correct": 0.25,
+              "time": "31/10@9:15"
+            },
+            "1698745757271": {
+              "correct": 0.5,
+              "time": "31/10@17:49"
+            }
+          }
+        }
+      }
+    }
+  },
+  "taggedImages": {
+  "Afghan Hound": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FAfghan%20Hound%2FAfghan_hound_00124.jpg?alt=media&token=0a01711a-b6f4-4001-a20f-f1046adbc3ca", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FAfghan%20Hound%2FAfghan_hound_00123.jpg?alt=media&token=b530453f-4f56-44a9-b7b0-5f33179258a2", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FAfghan%20Hound%2FAfghan_hound_00126.jpg?alt=media&token=2a4fe39f-f806-4607-900b-9aa2c1389f58"], 
+  "American Foxhound": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FAmerican%20Foxhound%2FAmerican_foxhound_00502.jpg?alt=media&token=a95e892a-bbb7-49c6-8f03-ff0af165fb0b", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FAmerican%20Foxhound%2FAmerican_foxhound_00501.jpg?alt=media&token=61405910-0d91-45a9-b191-192794ccf6f4", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FAmerican%20Foxhound%2FAmerican_foxhound_00507.jpg?alt=media&token=ca86e6d3-9ad6-4990-adef-00660647728b"], 
+  "Australian Shepherd": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FAustralian%20Shepherd%2FAustralian_shepherd_00825.jpg?alt=media&token=6681526e-0176-4f88-aa65-3a81a4e86888", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FAustralian%20Shepherd%2FAustralian_shepherd_00818.jpg?alt=media&token=2bd28e4a-8236-45a7-b715-0bc1516ecf39", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FAustralian%20Shepherd%2FAustralian_shepherd_00824.jpg?alt=media&token=61ca480c-84b9-4086-862b-7caeb5c24b05"], 
+  "Basenji": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBasenji%2FBasenji_01004.jpg?alt=media&token=b8b28358-00f1-4be6-a482-6d41135d91b9", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBasenji%2FBasenji_01005.jpg?alt=media&token=525a0076-c409-4f9a-93fe-b8739a111e0a", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBasenji%2FBasenji_01006.jpg?alt=media&token=808b207c-f69a-4e93-a4ef-b9dc70e3074b"], 
+  "Basset Hound": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBasset%20Hound%2FBasset_hound_01084.jpg?alt=media&token=24873b08-d794-4047-9a2b-5b3c2aec49f9", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBasset%20Hound%2FBasset_hound_01083.jpg?alt=media&token=42d9924a-8366-4a65-90f5-0026e695d1f8", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBasset%20Hound%2FBasset_hound_01087.jpg?alt=media&token=9d57cd38-292c-4bb2-bbf3-bffcf0bec4bb"], 
+  "Beagle": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBeagle%2FBeagle_01159.jpg?alt=media&token=addb901b-c328-4904-9939-9454c0deaa43", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBeagle%2FBeagle_01158.jpg?alt=media&token=5ac6710a-0b1a-4551-8676-c5d6fb8f5cb4", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBeagle%2FBeagle_01154.jpg?alt=media&token=dcc0b848-1c19-4d91-938b-8525c5c261b1"], 
+  "Bearded Collie": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBearded%20Collie%2FBearded_collie_01259.jpg?alt=media&token=f77bef33-3666-43ef-924f-019fd066c856", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBearded%20Collie%2FBearded_collie_01260.jpg?alt=media&token=05cba2df-6e2e-4af1-b132-fde9dfe3a617", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBearded%20Collie%2FBearded_collie_01254.jpg?alt=media&token=84b32e2c-6a27-485d-9238-e0a7b0a659ef"], 
+  "Beauceron": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBeauceron%2FBeauceron_01304.jpg?alt=media&token=63641162-12b7-468f-827b-ef776998bfae", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBeauceron%2FBeauceron_01306.jpg?alt=media&token=632196b3-89d6-46a4-bde2-d8b608f033bc", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBeauceron%2FBeauceron_01305.jpg?alt=media&token=0ca29633-3d48-4916-9a83-4ef2775a6f77"], 
+  "Belgian Malinois": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBelgian%20Malinois%2FBelgian_malinois_01427.jpg?alt=media&token=1fe93630-36fc-4da2-b4ef-9b2c19e286c8", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBelgian%20Malinois%2FBelgian_malinois_01432.jpg?alt=media&token=64decc68-0318-4b82-8f8c-5e5cc6f69812", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBelgian%20Malinois%2FBelgian_malinois_01434.jpg?alt=media&token=192da0b7-ee99-4f98-936b-406e5e129ac5"], 
+  "Belgian Sheepdog": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBelgian%20Sheepdog%2FBelgian_sheepdog_01535.jpg?alt=media&token=c325a725-2d56-4b33-a9b4-300309943747", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBelgian%20Sheepdog%2FBelgian_sheepdog_01536.jpg?alt=media&token=ece23e0f-7665-4f07-9b7c-1b5e553df565", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBelgian%20Sheepdog%2FBelgian_sheepdog_01534.jpg?alt=media&token=d0e4ca22-4c6d-4629-b8ea-179591b13495"], 
+  "Black and Tan Coonhound": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBlack%20and%20Tan%20Coonhound%2FBlack_and_tan_coonhound_01804.jpg?alt=media&token=d0c87f32-2c32-4f37-b8e7-8e5f5a0420a2", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBlack%20and%20Tan%20Coonhound%2FBlack_and_tan_coonhound_01802.jpg?alt=media&token=32edf1b6-0ca2-4f87-9f6e-9d5d63c3b381", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBlack%20and%20Tan%20Coonhound%2FBlack_and_tan_coonhound_01809.jpg?alt=media&token=50a87445-8f52-402c-b2e3-30a1c4331459"], 
+  "Bloodhound": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBloodhound%2FBloodhound_01884.jpg?alt=media&token=4c12162a-601b-4b7d-a157-38be4db9bbe4", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBloodhound%2FBloodhound_01882.jpg?alt=media&token=191f03de-feb6-435d-a733-b28fe85afe0f", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBloodhound%2FBloodhound_01883.jpg?alt=media&token=a6797ce2-9a78-4b93-a6c5-d181b96f0e39"], 
+  "Bluetick Coonhound": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBluetick%20Coonhound%2FBluetick_coonhound_01958.jpg?alt=media&token=b76ad37e-54fd-4cff-8abd-e15d4c0fed07", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBluetick%20Coonhound%2FBluetick_coonhound_01959.jpg?alt=media&token=6d7d707c-1a57-421c-a554-c695cde835db", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBluetick%20Coonhound%2FBluetick_coonhound_01960.jpg?alt=media&token=2b384e76-260f-4bb3-83db-c126561e872b"], 
+  "Border Collie": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBorder%20Collie%2FBorder_collie_02016.jpg?alt=media&token=e51ed501-42df-437a-9504-4f4399f89002", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBorder%20Collie%2FBorder_collie_02017.jpg?alt=media&token=f45cfff0-6f8a-40a3-943c-44491f3622b3", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBorder%20Collie%2FBorder_collie_02019.jpg?alt=media&token=3e2834ac-70b6-4c58-8e53-ee7dfd69f364"], 
+  "Bouvier des Flandres": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBouvier%20des%20Flandres%2FBouvier_des_flandres_02331.jpg?alt=media&token=b0312be9-5a41-4a74-b94b-51c90b209d5c", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBouvier%20des%20Flandres%2FBouvier_des_flandres_02335.jpg?alt=media&token=2276d3a8-bc90-4128-abc3-befc0ed61984", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBouvier%20des%20Flandres%2FBouvier_des_flandres_02333.jpg?alt=media&token=6a1b1901-c3ea-4a82-806d-4c0eb185873c"], 
+  "Briard": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBriard%2FBriard_02562.jpg?alt=media&token=efd468c8-0ce5-44a1-88a6-c117ff2fe4f1", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBriard%2FBriard_02564.jpg?alt=media&token=cb341b63-fe02-4bda-b660-93de58953378", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FBriard%2FBriard_02565.jpg?alt=media&token=62286b3d-eaf1-4c93-9b6a-0c1e72916c39"], 
+  "Collie": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FCollie%2FCollie_03796.jpg?alt=media&token=0f867d37-3227-42ca-9a24-d90a83f8aacc", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FCollie%2FCollie_03798.jpg?alt=media&token=d11091c2-f94f-4010-a064-ba7eb75fd619", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FCollie%2FCollie_03799.jpg?alt=media&token=3d8b009e-aebb-418c-9705-432c9096a13b"], 
+  "Dachshund": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FDachshund%2FDachshund_03989.jpg?alt=media&token=aaa0c5ca-61b0-4088-aae0-bc6ddeb1e551", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FDachshund%2FDachshund_03988.jpg?alt=media&token=ae7b7e4c-8c03-409f-bf70-9778e15089ea", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FDachshund%2FDachshund_03986.jpg?alt=media&token=6729edaa-55ba-4bc6-a39f-fd2faa217120"], 
+  "German Shepherd Dog": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FGerman%20Shepherd%20Dog%2FGerman_shepherd_dog_04950.jpg?alt=media&token=626d0769-a4ff-43da-b502-aa663c70a7bc", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FGerman%20Shepherd%20Dog%2FGerman_shepherd_dog_04956.jpg?alt=media&token=da4d6f30-8232-48f4-b67f-b82e220c12f9", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FGerman%20Shepherd%20Dog%2FGerman_shepherd_dog_04954.jpg?alt=media&token=13298a93-a7ce-4c99-bc73-714fc86c9a4a"], 
+  "Icelandic Sheepdog": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FIcelandic%20Sheepdog%2FIcelandic_sheepdog_05730.jpg?alt=media&token=4e803634-3098-48e8-8da4-75ca0e6dbdef", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FIcelandic%20Sheepdog%2FIcelandic_sheepdog_05731.jpg?alt=media&token=28eade85-87bd-4b5d-a69d-9735778f73f8", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FIcelandic%20Sheepdog%2FIcelandic_sheepdog_05732.jpg?alt=media&token=e1a0e1db-4486-4d64-bca1-801ccfa875dc"], 
+  "Irish Wolfhound": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FIrish%20Wolfhound%2FIrish_wolfhound_06020.jpg?alt=media&token=54ecfc8b-1b87-4f2d-957a-0625092fbc00", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FIrish%20Wolfhound%2FIrish_wolfhound_06031.jpg?alt=media&token=60affe19-e9d5-4869-bd3b-ff6170bee06b", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FIrish%20Wolfhound%2FIrish_wolfhound_06021.jpg?alt=media&token=680a1b6b-6aa5-4b0b-b818-1adf78ee054c"], 
+  "Old English Sheepdog": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FOld%20English%20Sheepdog%2FOld_english_sheepdog_07374.jpg?alt=media&token=b4b4dd02-0800-4812-b03a-2c364556b84e", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FOld%20English%20Sheepdog%2FOld_english_sheepdog_07381.jpg?alt=media&token=f7a4232d-a046-41db-9354-18747aa25017", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FOld%20English%20Sheepdog%2FOld_english_sheepdog_07384.jpg?alt=media&token=ef7e5de7-3616-4700-b467-e4dbbfbe8caa"], 
+  "Otterhound": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FOtterhound%2FOtterhound_07399.jpg?alt=media&token=977ecdec-8995-48a5-b2a2-259ccdb1d4b7", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FOtterhound%2FOtterhound_07413.jpg?alt=media&token=a8b8b5e1-b731-4d53-811c-15c6373cdd4c", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FOtterhound%2FOtterhound_07412.jpg?alt=media&token=3e975a55-39de-458d-a1dd-2a37d2205cf4"], 
+  "Plott Hound": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FPlott%20Hound%2FPlott_07785.jpg?alt=media&token=6aa9569e-efd0-4b1c-97c1-4d464c44ae41", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FPlott%20Hound%2FPlott_07779.jpg?alt=media&token=d1bda825-4eec-4a9b-87c9-bf1eee763900", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/Dogs%2FPlott%20Hound%2FPlott_07778.jpg?alt=media&token=7aa71f7b-bd66-4e34-90eb-89ff44b81454"],
+  "Boule de pain": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FBoule%20de%20pain%2Fanother-french-boule.jpg?alt=media&token=ab42f7d1-2bd2-4a74-bd63-52cfc97b7b7d", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FBoule%20de%20pain%2FUntitled.jpeg?alt=media&token=433db2bb-797f-4f0d-8a7f-76bb2cccfb14", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FBoule%20de%20pain%2Fboule.JPG?alt=media&token=d3f3b1f2-8377-4ddc-b7d7-98c6eca8f84b"], 
+  "Brioche": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FBrioche%2FUntitled.jpeg?alt=media&token=eaceeea4-e408-4e31-b922-329f24077f48", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FBrioche%2Fbrioche-nanterre.jpeg?alt=media&token=b920d905-4bae-48e4-9365-190e6c8ba310", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FBrioche%2Fb30fe550-7b49-4931-8382-0615dea62be8_5Wcnm8l.jpg?alt=media&token=1496b08e-fa27-445e-9730-cb02b8e80805"], "Croissant": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FCroissant%2Fimaddges.jpeg?alt=media&token=aea48539-a155-4bd4-8200-3330dd17e575", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FCroissant%2Fcroissants-28a-500x375.jpg?alt=media&token=346766ef-1f16-45ec-9fae-b781c63edea1", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FCroissant%2FUntitled.jpeg?alt=media&token=9033e031-68b5-4328-b099-ef58530ddea1"], "Fouee": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FFouee%2F2018-07-21.jpg?alt=media&token=27fbd912-8966-4aa6-b06a-0bbe4a2a1fe2", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FFouee%2FFou%C3%A9e-de-Touraine-au-thermomix.jpg?alt=media&token=f3dc2b6a-a603-4ff8-ac6c-171e5364a162", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FFouee%2FDSCF2090.JPG?alt=media&token=ceb8804c-11d0-4256-b8fe-e3a17db58639"], "Fougasse": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FFougasse%2F605de6b14af17a79ee0368f3d5fd892c997f6217d02ea.jpg?alt=media&token=0f775a5f-5d6a-4dc4-954e-9980ad80115e", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FFougasse%2FIMG_5461_Fougasse-4x3-1-2000-d76632423a6444489cd2d90910097062.jpg?alt=media&token=1386c13f-f00f-4c8c-848c-298b6fd5971e", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FFougasse%2FIMGP8516-2.jpg?alt=media&token=cb1ad14f-8443-4462-9f1e-c5a5d812f1de"], "Gibassier": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FGibassier%2FGibassier-wild-yeast-600.jpg?alt=media&token=205bf17e-eae7-46d4-9d5b-a3096f586dfd", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FGibassier%2Fac0c5-gibassier5.jpg?alt=media&token=d9b6a8d6-1c34-425d-8b8c-fa395c73d52e", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FGibassier%2FUntitled.jpeg?alt=media&token=5b11ad23-a83a-4d2d-a4fa-1f9dd3322904"], "Pain au chocolat": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FPain%20au%20chocolat%2FUntitled.jpeg?alt=media&token=298c5049-96fd-4738-9371-1d86dca9a707", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FPain%20au%20chocolat%2FSE.jpg?alt=media&token=9bea0a5a-965c-4b36-b8be-e21ca1a50b92", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FPain%20au%20chocolat%2F83668.jpg?alt=media&token=b92acb7e-518b-4018-a8a5-49f68195c1c6"], "Pain au son": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FPain%20au%20son%2F360.jpg?alt=media&token=8792c09c-9e18-4705-b649-5c0223042d51", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FPain%20au%20son%2Fi9793-recette-de-pain-au-son.jpeg?alt=media&token=9267f4b2-b36c-4ac9-9ce2-b31697daf3c8", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FPain%20au%20son%2Fimages.jpeg?alt=media&token=43e0b502-4349-4944-ac5f-28ca1cf9d9e0"], "Pain d'epices": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FPain%20d'epices%2FPain-d%C3%A9pices-traditionnel-maison.jpg?alt=media&token=4da4f996-884a-4862-95b5-57c09836a3e3", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FPain%20d'epices%2FWhatsApp%20Image%202023-07-07%20at%2007.33.20.jpeg?alt=media&token=4a1f5333-8590-4915-a1d4-9c199bf6ff61", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FPain%20d'epices%2Fimagees.jpeg?alt=media&token=1f70b931-1be0-44af-a023-4bb44d75e2ab"], "Pain de campagne": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FPain%20de%20campagne%2Fcampagne.jpg?alt=media&token=80baf440-91aa-4c7e-8b4e-78516bf82f53", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FPain%20de%20campagne%2FUntitled.jpeg?alt=media&token=7fba1b63-5a77-4c10-a86e-d7ce1aa4f564", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FPain%20de%20campagne%2FPicsArt_03-25-08.56.55-810x810.jpg?alt=media&token=f94594c1-333d-4512-b365-06e6292c7e49"], "Pogne de Romans": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FPogne%20de%20Romans%2F1200x680_sc_481171-g1xnhytwpk-whr.jpg?alt=media&token=a8f7e7c6-9a79-4ee2-a067-ddbc2349b296", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FPogne%20de%20Romans%2FUntitled.jpeg?alt=media&token=3b103511-57e4-4292-97ec-68f4f81fb0fe", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FPogne%20de%20Romans%2F99851536_o.jpg?alt=media&token=46f1372c-7b10-478c-a815-5d0d0105b36a"], "Pompe a l'huile": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FPompe%20a%20l'huile%2Fimages.jpeg?alt=media&token=24ede419-a98b-43bd-8bcc-129e2fab62c9", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FPompe%20a%20l'huile%2F12308443_1679215279020649_6752650209657314584_n-54.jpg?alt=media&token=33cfb01a-a7f0-4954-8117-f315ae33addd", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/French%20Bread%2FPompe%20a%20l'huile%2FPompe-a-huile-gateau.jpg?alt=media&token=49f7ab61-6cfe-4ea7-85a0-b82354ce63db"],
+  "African black duck": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/South%20African%20Birds%2FAfrican%20black%20duck%2Fb.jpg?alt=media&token=1da0b199-7696-4b5e-9c8a-9f574ecec13e", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/South%20African%20Birds%2FAfrican%20black%20duck%2FK38102.jpg?alt=media&token=1fb8f818-660f-457f-b450-8344e419815e", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/South%20African%20Birds%2FAfrican%20black%20duck%2Fafrican-black-duck-kruger-national-park-2HKA8JB.jpg?alt=media&token=3fb5b157-d29d-4ec7-aca9-4dab17276ca5"], "African pygmy-goose": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/South%20African%20Birds%2FAfrican%20pygmy-goose%2F799px-African_Pygmy_Goose_RWD.jpg?alt=media&token=6726fcce-dde6-43de-81a8-5e1c9d2f37dc", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/South%20African%20Birds%2FAfrican%20pygmy-goose%2FPygmy-Geese-PV.jpg?alt=media&token=980f865f-d999-4328-9fa5-dc250bbce81b", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/South%20African%20Birds%2FAfrican%20pygmy-goose%2FTIFF2.jpg?alt=media&token=31f88b89-0cfe-4071-8666-a66f49f57981"], "Blue-billed teal": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/South%20African%20Birds%2FBlue-billed%20teal%2FAnatra_ottentotta.jpeg?alt=media&token=d33756d4-c9ac-4870-ac7c-9a7eae92942e", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/South%20African%20Birds%2FBlue-billed%20teal%2F12525yy356.jpg?alt=media&token=2938169f-facd-467b-a619-1c7fb5153189", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/South%20African%20Birds%2FBlue-billed%20teal%2F900.jpeg?alt=media&token=8404a202-d19e-4f1e-8471-dff690c0b456"], "Cape teal": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/South%20African%20Birds%2FCape%20teal%2Fcapeddd_teal.jpg?alt=media&token=03a6f3be-d642-40df-b5ae-8ca2a3f2223c", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/South%20African%20Birds%2FCape%20teal%2Fdfs17.jpg?alt=media&token=9342de24-5fbb-4d9b-8c8c-ae643f784a59", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/South%20African%20Birds%2FCape%20teal%2Fghf.JPG?alt=media&token=200a9b7b-488d-43ab-bc1e-cf0af467e753"], "Egyptian goose": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/South%20African%20Birds%2FEgyptian%20goose%2FUntitled.jpeg?alt=media&token=4579bc7e-7600-4ad6-9ced-243c30eff6b3", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/South%20African%20Birds%2FEgyptian%20goose%2FEgyptian-family-DT.jpeg?alt=media&token=c3e9de03-9b59-4e4a-96e5-0ecab7ce5f45", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/South%20African%20Birds%2FEgyptian%20goose%2FUntitlgged.jpeg?alt=media&token=31eed705-409a-4d2e-8ecb-b07dba2edf1b"], "Knob-billed duck": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/South%20African%20Birds%2FKnob-billed%20duck%2Fb.jpg?alt=media&token=e724c054-beac-4887-aa76-b3cc43ee51cf", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/South%20African%20Birds%2FKnob-billed%20duck%2Fcornell.jpeg?alt=media&token=629fe566-dfd9-49bf-bc6d-cdafbd911a66", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/South%20African%20Birds%2FKnob-billed%20duck%2FMYH7EWw5zK.jpg?alt=media&token=26b2468e-7377-4f69-b160-7cae51504d11"], "Maccoa duck": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/South%20African%20Birds%2FMaccoa%20duck%2F1800.jpeg?alt=media&token=c3e06002-d087-4621-8741-9fb952226b7b", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/South%20African%20Birds%2FMaccoa%20duck%2FUntitled.jpeg?alt=media&token=4f572e74-37a3-4f71-ab08-e0a59b57f2e3", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/South%20African%20Birds%2FMaccoa%20duck%2Fb.jpg?alt=media&token=9c6a78e4-1c09-4544-8f6d-bea16f8cd246"], "South african shelduck": ["https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/South%20African%20Birds%2FSouth%20african%20shelduck%2Fggg1.JPG?alt=media&token=e294d1ca-3e7d-47ae-848b-c1e8fb538fc1", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/South%20African%20Birds%2FSouth%20african%20shelduck%2FUntitleggd.jpeg?alt=media&token=d28a4616-b374-434a-b58d-86dab1c60ff4", "https://firebasestorage.googleapis.com/v0/b/fir-auth-31f82.appspot.com/o/South%20African%20Birds%2FSouth%20african%20shelduck%2FUntitled.jpeg?alt=media&token=3469e31e-803b-4b24-852e-3553b70bf2ec"]
+  }
+}

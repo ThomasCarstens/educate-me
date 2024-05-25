@@ -7,6 +7,7 @@ import SelectionScreen from './screens/SelectionScreen';
 
 import { ref as ref_d, set, get, onValue } from 'firebase/database'
 import { storage, database } from './firebase'
+import SpeciesScreen from './screens/SpeciesScreen';
 
 const Stack = createNativeStackNavigator();
 const UserContext = React.createContext()
@@ -35,9 +36,12 @@ function App() {
             <UserContext.Provider value={hi}>
               <NavigationContainer>
                 <Stack.Navigator>
+
                   <Stack.Screen options={{headerShown: false}} initialParams={{"gameFileContext": gameFileContext}} name="Login" component={LoginScreen} />
                   <Stack.Screen options={{headerShown: false}} initialParams={{"gameFileContext": gameFileContext}} name="Selection" component={SelectionScreen} />
                   <Stack.Screen options={{headerShown: false}} initialParams={{"gameFileContext": gameFileContext}} name="Home" component={HomeScreen} />
+                  <Stack.Screen options={{headerShown: false}} initialParams={{"gameFileContext": gameFileContext}} name="Species" component={SpeciesScreen} />
+
                 </Stack.Navigator>
               </NavigationContainer>
             </UserContext.Provider>
