@@ -22,13 +22,25 @@ https://www.img2go.com
 When opening the modal on Game Selection Screen
 ## Fix 1: Using a community {Modal} based on the Docs {Modal}. Tested successfully in SelectionScreen.
 
+
 # crash with auth
 
 When Session Persistence redirects to SelectionScreen without gameFile being in props. Solution might be AsyncStorage.
  -- Bigger problem right now is crash on device, but change auth file for persistence.
 
 # redesigned login screen and bulk download button put on backburner
-{/* DISABLED BECAUSE IT FETCHES ONE GAME BUT APPEARS TO FETCH ALL WHEN MOVING TO ANOTHER MODAL}
+{/* DISABLED BECAUSE IT FsETCHES ONE GAME BUT APPEARS TO FETCH ALL WHEN MOVING TO ANOTHER MODAL}
 
 
 # Feedback is broken.
+    // set without user. tbd. From database
+    setIncorrectDistribution((distributionDict)=>{
+    for (tag_i=0; tag_i<allTags.length; tag_i++){
+        distributionDict[allTags[tag_i]]=0
+      }      
+      return distributionDict
+    })        
+
+# bug: Update correctRate as soon as SpeciesScreen reappears.
+      
+# logo: make it consistent

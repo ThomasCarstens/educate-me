@@ -195,6 +195,7 @@ const HomeScreen = (props) => {
   
   // ONE-TIME UPDATE: Screen Title \\ LearningLevel based on entry in spoofMacroGameSets \\ Database Labelling
   useEffect(() => {
+    var gameName = spoofMacroGameSets[selectedFolder][macroName][gameSetLevel][0]
     navigation.setOptions({
       title: gameName+' Game',
     });
@@ -202,7 +203,7 @@ const HomeScreen = (props) => {
     if (gameIsThreaded){
       setLearningLevel(spoofMacroGameSets[selectedFolder][macroName][macroLevel][3])
     }
-    var gameName = spoofMacroGameSets[selectedFolder][macroName][gameSetLevel][0]//spoofGameSets[selectedGame][gameSetLevel]
+    
     console.log(macroName, "is the game noww. Selected Game is", selectedGame, "and gameName is", gameName)
 
     /* CAREFUL, VISIBLE PERFORMANCE LIMITATIONS. */
@@ -230,13 +231,14 @@ const HomeScreen = (props) => {
   const [loading, setLoading] = useState(true)
   const [correctClickCount, setCorrectClickCount] = useState(0)
   const [incorrectClickCount, setIncorrectClickCount] = useState(0)
-  
   const [successRate, setSuccessRate] = useState(1)
   const [modalVisible, setModalVisible] = useState(false)
   // setSelectedGame(spoofMacroGameSets[selectedFolder][macroName][gameSetLevel][0])
   
   // const [gameName, setGameName ] = useState(spoofIncorrectTag[gameName][learningLevel]) // this is an issue upon first load.
   const [incorrectTag, setIncorrectTag ] = useState(spoofIncorrectTag[selectedGame][learningLevel]) // this is an issue upon first load.
+  const [incorrectDistribution, setIncorrectDistribution] = useState({})
+
   const [instructionText, setInstructionText] = useState(spoofInstructions[selectedGame][learningLevel])
   const [correctTag, setCorrectTag] = useState(spoofCorrectTag[selectedGame][learningLevel])
   
@@ -277,7 +279,7 @@ const HomeScreen = (props) => {
           gameSetLevel: gameSetLevel,
           folder: selectedFolder,
           gameName: spoofGameFolders[selectedFolder][selectedGame][0],
-          levelGrouping: gameName,
+          levelGrouping: gameSetLevel,
           macroName: macroName,
         }).catch(error =>alert(error.message)); 
 
@@ -324,6 +326,15 @@ const HomeScreen = (props) => {
     // doShuffleAndLay(tagDictionary)
     setInitFlag(1)
 
+    // set without user. tbd. From database
+    setIncorrectDistribution((distributionDict)=>{
+    for (tag_i=0; tag_i<allTags.length; tag_i++){
+        distributionDict[allTags[tag_i]]=0
+      }      
+      return distributionDict
+    })        
+      
+    // console.log(incorrectDistribution)
   }, [incorrectTag]) //TEST
 
 
@@ -627,17 +638,18 @@ const HomeScreen = (props) => {
 
       setIncorrectClickCount(prevState=> prevState+1)
 
-      // for (let i=0; i<incorrectTag.length; i++){
-      //   if (galleryTags[incorrectTag[i]]?.includes(gallery[picNb-1])){
-      //     let feedbackTag = incorrectTag[i]
-      //     toast.current.show("Correction: "+feedbackTag+".", { type: "error" });
-      //   }
-      // }
+      
 
       toast.current.show("Correction: "+findLabelOfPic(picNb)+".", { type: "error" });
       
       
     }
+
+    // LEARNING USER PATTERN
+      // {incorrectDistribution: {"Afghan Hound": {"Wolfhound":0, "BloodHound": 0 }}}
+      setIncorrectDistribution((distribution)=>{
+        distribution[findLabelOfPic(picNb)] = distribution[findLabelOfPic(picNb)] + 1
+        return distribution})
 
   }
 
@@ -695,12 +707,14 @@ const HomeScreen = (props) => {
     if (correctLeftInGallery.length == 0){
       setLoading(true)
       const currentDate = new Date();
-      const timestamp = currentDate.getTime(); 
+      const timestamp = currentDate.getTime();
+      console.log(incorrectDistribution) 
       // Update correctTag Accuracy (set by timestamp to prevent resetting)
       if (auth.currentUser) {
         set(ref_d(database, `userdata/${ auth.currentUser.uid}/`+selectedFolder+'/tags/'+correctTag + '/'+timestamp), {
           correct: averageCorrectRate,
-          time: currentDate.getDate()+'/'+(currentDate.getMonth()+1)+'@'+currentDate.getHours()+':'+currentDate.getMinutes()
+          time: currentDate.getDate()+'/'+(currentDate.getMonth()+1)+'@'+currentDate.getHours()+':'+currentDate.getMinutes(),
+          distribution: incorrectDistribution
         }).catch(error =>alert(error.message));           
       }
 
@@ -752,6 +766,7 @@ const HomeScreen = (props) => {
       // Resetting In-Game state
       setCorrectClickCount(0)  
       setIncorrectClickCount(0)
+      setIncorrectDistribution({})
       setLearningLevel(1)
       // Next level in Macro - game is complete.
       setGameSetLevel(previous => previous+1)
@@ -829,6 +844,8 @@ const HomeScreen = (props) => {
       </View>
       <View style={{flexDirection: 'column', alignItems: 'center'}}>
       
+
+      
       {/* <Text style={{fontSize: 20, color:'black'}}> {instructionText} </Text> */}
 
       {/* IMAGE ONLY IN HOME SCREEN */}
@@ -845,13 +862,11 @@ const HomeScreen = (props) => {
       <View style={{padding: 3}}></View>
       <View style={{flexDirection: 'row'}} >
       <View style={{ flex: 1, width: 20, height: 150*3, backgroundColor: 'rgb(13, 1, 117)' }}/>
-      <View style={{flexDirection: 'column', width:115, marginTop:10}}>
-      <Text style={{fontSize: 20, color:'black'}}> {instructionText} </Text>
-      <View   style={{flexDirection: 'column', alignItems: 'center', justifyContent: 'space-around'}}>
+      <View style={{flex: 5, flexDirection: 'column', width:115, marginTop:10}}>
 
 
 
-{/* NEXT LEVEL (when GameComplete) / Progress BAR (when not) */}
+        {/* NEXT LEVEL (when GameComplete) / Progress BAR (when not) */}
 
 {(gameComplete&&(!gameSetComplete))? 
 /*A - if between games*/
@@ -871,19 +886,20 @@ const HomeScreen = (props) => {
 
     // MacroGames ('threaded') lead on to the next, else replace with Final Score.
     if (gameIsThreaded ==1) {
+      //spoofMacroGameSets[selectedFolder][macroName][macroLevel+ 1][1]
 
-      navigation.replace(spoofMacroGameSets[selectedFolder][macroName][macroLevel+ 1][1], { 
+      navigation.replace("Species", { 
         gameFile: gameFile,
-        name: spoofMacroGameSets[selectedFolder][macroName][macroLevel+ 1][0],
-        folder: spoofMacroGameSets[selectedFolder][macroName][macroLevel+ 1][2],
-        macroLevel: macroLevel + 1,
+        name: spoofMacroGameSets[selectedFolder][macroName][macroLevel][0],
+        folder: spoofMacroGameSets[selectedFolder][macroName][macroLevel][2],
+        macroLevel: macroLevel,
         macroName: macroName,
         hint: hint, 
         gameIsThreaded: 1,
         gameDownloaded: 1,
         galleryTags: galleryTags,
         application: applicationImages,
-        level: gameSetLevel+1, //gameName?
+        level: gameSetLevel, //gameName?
         data: (auth.currentUser)?userData:0 })
     } else {
 
@@ -898,21 +914,37 @@ const HomeScreen = (props) => {
     <Text style={styles.buttonText}>Finish</Text></TouchableOpacity>
 
 : /*C - else if game is not complete*/
-<Progress.Bar progress={progressCalculate()} color={'rgb(13, 1, 117)'}  borderRadius={20} marginTop={20} width={110} height={30}/>
+<Progress.Bar progress={progressCalculate()}  color={'rgb(13, 1, 117)'}  borderRadius={20} marginLeft={10} width={200} height={30}/>
 }
+        {/* end of --- NEXT LEVEL (when GameComplete) / Progress BAR (when not) */}
 
 
+      <Text style={{fontSize: 20, marginTop: 10, color:'black'}}> {instructionText} </Text>
+      <View   style={{flexDirection: 'column', alignItems: 'center', justifyContent: 'space-around'}}>
+
+
+
+      <View   style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around'}}>
 <TouchableOpacity  padding={50}  style={{...styles.button, width:100}} onPress={()=>setShowHint(!showHint)} >
-    {// HINT SHOWN
+    {// PICTURE SHOWN
     showHint?<Image 
       source={{uri:`${galleryTags[correctTag]}`,}}
       style={{...styles.imageContainer, height:100, width: 100}}
       placeholder={blurhash}
       contentFit="cover"
       transition={1000}
-      />:<Text style={styles.buttonText}>Hint</Text>}
+      />:<Text style={styles.buttonText}>Picture</Text>}
+
 </TouchableOpacity>
 
+
+
+<TouchableOpacity  padding={50}  style={{...styles.button, width:100}} onPress={()=>setShowHint(!showHint)} >
+
+    {showHint?<Text style={styles.buttonText}> I'm learning what hints to give... Please finish level.</Text>
+    :<Text style={styles.buttonText}>Hint</Text>}
+</TouchableOpacity>
+</View>
 
 
 </View>
@@ -991,6 +1023,32 @@ const HomeScreen = (props) => {
         {gallery[5] !== '' ?
           <Image 
             source={{uri:`${gallery[5]}`,}}
+            style={styles.imageContainer}
+            placeholder={blurhash}
+            contentFit="cover"
+            transition={1000}
+          />:null}         
+        </TouchableHighlight>
+      </View>
+
+      <View style={{flexDirection: 'column'}}>
+
+
+        <TouchableHighlight onPress={()=> handlePicSelection(7)}>
+        {gallery[2] !== '' ?
+        <Image 
+          source={{uri:`${gallery[6]}`,}}
+          style={styles.imageContainer}
+          placeholder={blurhash}
+          contentFit="cover"
+          transition={1000}
+        />:null} 
+        </TouchableHighlight>
+
+        <TouchableHighlight onPress={()=> handlePicSelection(8)}>
+        {gallery[5] !== '' ?
+          <Image 
+            source={{uri:`${gallery[7]}`,}}
             style={styles.imageContainer}
             placeholder={blurhash}
             contentFit="cover"

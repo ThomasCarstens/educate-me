@@ -26,7 +26,7 @@ const LoginScreen = (props) => {
     const userLoggedIn = (auth.currentUser)
     // const gameFileContext1= useContext(gameFileContext);
     // console.log('gamefile context:', gameFileContext1)
-    console.log('from initialParams: ', props.route.params.gameFileContext)
+    // console.log('from initialParams: ', props.route.params.gameFileContext)
     // Automatic login: if there is a current user
     if (userLoggedIn !== null){
       navigation.replace("Selection", {gameFile: gameFile})

@@ -1,4 +1,4 @@
-import { StyleSheet, Image, Text, TouchableOpacity, View, TouchableHighlight, TextInput, StatusBar, Platform, Linking, Dimensions } from 'react-native'
+import { StyleSheet, Image, Text, TouchableOpacity, View, TouchableHighlight, TextInput, StatusBar, Platform, Linking, Dimensions, ImageBackground } from 'react-native'
 import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import Modal from "react-native-modal";
 import { auth, storage, database } from '../firebase'
@@ -11,6 +11,7 @@ import Toast from 'react-native-fast-toast';
 import * as Progress from 'react-native-progress';
 import * as ScreenOrientation from 'expo-screen-orientation';
 import { Audio } from "expo-av"
+import { BackgroundImage } from 'react-native-elements/dist/config';
 
 
 const SpeciesScreen = (props) => {
@@ -779,26 +780,26 @@ const SpeciesScreen = (props) => {
   return (
     
 
-    <View>
-
+                              
+      <ImageBackground source={require('../parang-nitik.jpg')} style={{ marginTop: 40}} > 
+       <View>  
       <View  style={{backgroundColor:colors.background, marginTop: 20}}> 
       <View style={{flexDirection: 'row', alignItems: 'center', justifyContent:'flex-start'}}>
         <TouchableOpacity  onPress={handleSelectionScreen}>
-          <Text style={{...styles.buttonText, color:'black'}}>{"< Back"}</Text>
+          <Text style={{...styles.buttonText, color:'white'}}>{"< Back"}</Text>
         </TouchableOpacity>
-        <Text style={{fontSize: 13, alignContent: 'flex-end', marginLeft: 20}} > 
+        <Text style={{fontSize: 13, alignContent: 'flex-end', marginLeft: 20, color:'white'}} > 
         {macroName.toUpperCase()} Game </Text>
 
           
       </View>
 
-
     
-      <View style={{padding: 3}}>      
+      <View style={{padding: 20}}>      
 
     </View>
 
-        <View style={{flexDirection: 'row'}} >
+        <View style={{flexDirection: 'row', justifyContent:"space-between", marginLeft: 30}} >
         <View style={{flexDirection: 'column'}}>
                 <TouchableOpacity >
                   <Image 
@@ -816,14 +817,35 @@ const SpeciesScreen = (props) => {
 
 
                 {auth.currentUser?
-                <View>
+                <View><View>
                 <Progress.Bar progress= {ifUserAttempted(3)?determineTagProgress(3):0.05 } color={'rgb(13, 1, 117)'} style={{backgroundColor:'white'}} borderRadius={20} marginTop={20} width={110} height={30}/>
                 <View style={styles.percentLabel}>
                     <Text style={{color: 'orange'}}>{ifUserAttempted(3)?Math.round(determineTagProgress(3)*100)+'%':'Start recording.'}</Text>
-                  </View></View>: <View><Progress.Bar progress= {0.1} color={'rgb(13, 1, 117)'} style={{backgroundColor:'white'}} borderRadius={20} marginTop={20} width={110} height={30}/>
-                <View style={styles.percentLabel}>
-                    <Text style={{marginBottom:-4}}>{'Login for progress bar.'}</Text>
+                  </View>
+                  
+                  
+                  </View>
+                  
+                  <View flexDirection="row" >
+                  <Image 
+                    source={{uri:`${galleryTags[tagList[2]]}`,}}
+                    style={styles.imageRecap}
+                    placeholder={blurhash}
+                    contentFit="cover"
+                    transition={1000}
+                  />
+                  <Image 
+                    source={{uri:`${galleryTags[tagList[1]]}`,}}
+                    style={styles.imageRecap}
+                    placeholder={blurhash}
+                    contentFit="cover"
+                    transition={1000}
+                  />
+
                   </View></View>
+                  
+                  : null
+                  
                 }
                 
 
@@ -851,11 +873,7 @@ const SpeciesScreen = (props) => {
                 <Progress.Bar progress= {ifUserAttempted(2)?determineTagProgress(2):0.05 } color={'rgb(13, 1, 117)'} style={{backgroundColor:'white'}} borderRadius={20} marginTop={20} width={110} height={30}/>
                 <View style={styles.percentLabel}>
                     <Text style={{color: 'orange'}}>{ifUserAttempted(2)?Math.round(determineTagProgress(2)*100)+'%':'Start recording.'}</Text>
-                  </View></View>: <View><Progress.Bar progress= {0.1} color={'rgb(13, 1, 117)'} style={{backgroundColor:'white'}} borderRadius={20} marginTop={20} width={110} height={30}/>
-                <View style={styles.percentLabel}>
-                    <Text style={{marginBottom:-4}}>{'Login for progress bar.'}</Text>
-                  </View></View>
-                }
+                  </View></View>: null}
 
                 
               </View>
@@ -881,11 +899,7 @@ const SpeciesScreen = (props) => {
                 <Progress.Bar progress= {ifUserAttempted(1)?determineTagProgress(1):0.05 } color={'rgb(13, 1, 117)'} style={{backgroundColor:'white'}} borderRadius={20} marginTop={20} width={110} height={30}/>
                 <View style={styles.percentLabel}>
                     <Text style={{color: 'orange'}}>{ifUserAttempted(1)?Math.round(determineTagProgress(1)*100)+'%':'Start recording.'}</Text>
-                  </View></View>: <View><Progress.Bar progress= {0.1} color={'rgb(13, 1, 117)'} style={{backgroundColor:'white'}} borderRadius={20} marginTop={20} width={110} height={30}/>
-                <View style={styles.percentLabel}>
-                    <Text style={{marginBottom:-4}}>{'Login for progress bar.'}</Text>
-                  </View></View>
-                }                
+                  </View></View>: null }                
 
                 
               </View>
@@ -911,11 +925,7 @@ const SpeciesScreen = (props) => {
                 <Progress.Bar progress= {ifUserAttempted(0)?determineTagProgress(0):0.05 } color={'rgb(13, 1, 117)'} style={{backgroundColor:'white'}} borderRadius={20} marginTop={20} width={110} height={30}/>
                 <View style={styles.percentLabel}>
                     <Text style={{color: 'orange'}}>{ifUserAttempted(0)?Math.round(determineTagProgress(0)*100)+'%':'Start recording.'}</Text>
-                  </View></View>: <View><Progress.Bar progress= {0.1} color={'rgb(13, 1, 117)'} style={{backgroundColor:'white'}} borderRadius={20} marginTop={20} width={110} height={30}/>
-                <View style={styles.percentLabel}>
-                    <Text style={{marginBottom:-4}}>{'Login for progress bar.'}</Text>
-                  </View></View>
-                }      
+                  </View></View>: null }
 
               </View>
               <View style={{padding: 20}}></View>
@@ -1008,13 +1018,23 @@ const SpeciesScreen = (props) => {
       
         </View>
         <View>
-                    <Text style={{fontSize:15, color: 'orange', marginLeft: 100, marginTop: 10}}>{'Learning progress scores'.toUpperCase()}</Text>
-        </View>
+
+              {/* PROGRESS IF LOGGED IN */}
+              {auth.currentUser?
+                    <Text style={{fontSize:15, color: 'orange', marginLeft: 120, marginTop: 10}}>{'Most confused Species'.toUpperCase()}</Text>
+        
+                 :
+                 <Text style={{fontSize:15, color: 'orange', marginLeft: 120, marginTop: 10}}>{'To track your progress, log in'.toUpperCase()}</Text>
+              } 
+                    </View>
 
 
       </View>
       {/* </Modal> */}
-    </View>
+      
+
+    </View> 
+    </ImageBackground>  
   )
 
 }
@@ -1023,6 +1043,7 @@ export default SpeciesScreen
 
 const colors = {
   background: 'rgba(102, 0, 102, 0.8)',
+  pattern: '../assets/bg/parang-nitik.jpg',
   cardTag: '	rgb(128,128,128)',
   modalButtonText: 'rgb(50, 200, 1000)',
   bars: {
@@ -1090,6 +1111,12 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
 
+    imageRecap: {
+
+      width:40,
+      height:40,
+      borderRadius:100,
+    },
 
     imageContainer: {
         // flex:1,
