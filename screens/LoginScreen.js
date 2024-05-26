@@ -58,7 +58,9 @@ const LoginScreen = (props) => {
 
     // useEffect(() => {
         console.log('Is the user logged in? ', userLoggedIn)
-        ScreenOrientation.lockAsync(2); //LANDSCAPE_LEFT
+        // ScreenOrientation.lockAsync(2); //LANDSCAPE_LEFT
+        ScreenOrientation.lockAsync(6); //LANDSCAPE_LEFT
+
         const unsubscribe = auth.onAuthStateChanged(user=> {
             if (user) {
                 // AsyncStorage.setItem('@TestUser:key', auth.currentUser);
@@ -110,45 +112,56 @@ const LoginScreen = (props) => {
     <KeyboardAvoidingView
         style={styles.container}
         behavior="padding">
-        <Image source={require("../logo.png")} style={{height:200, width:200, marginLeft:0, borderRadius: 20}}></Image>
-        <Text  style={{color: 'black', fontSize:20}}  marginLeft={20} >
-        {'Cognitive Gen'} 
-        </Text>
-        <View padding={20}></View>
-        <Toast ref={toast} />
-        <View style={styles.inputContainer}>
-            <TextInput
-                placeholder="Email"
-                value={email}
-                onChangeText={text => setEmail(text) }
-                style={styles.input}/>
+            <View style={{flexDirection: 'row'}} >
+                <View style={{flexDirection: 'column', flex: 1}} ></View>
+                <View style={{flexDirection: 'column', flex: 4}} >
+                <View padding={30} ></View>
+                    <Image source={require("../logo.webp")} style={{height:200, width:200, marginLeft:0, borderRadius: 20}}></Image>
+                    {/* <Text  style={{color: 'black', fontSize:20}}  marginLeft={20} >
+                    {'Cognitive Gen'} 
+                    </Text> */}
+                </View>
+                <View style={{flexDirection: 'column', flex: 6}} >
 
-            <TextInput
-                placeholder="Password"
-                value={password}
-                onChangeText={text => setPassword(text) }
-                style={styles.input}
-                secureTextEntry/>
-        </View>
+                                    <View padding={20}></View>
+                        <Toast ref={toast} />
+                        <View style={styles.inputContainer}>
+                            <TextInput
+                                placeholder="Email"
+                                value={email}
+                                onChangeText={text => setEmail(text) }
+                                style={styles.input}/>
 
-        <View style={styles.buttonContainer}>
-            <TouchableOpacity
-                onPress={handleLogin}
-                style={[styles.button, styles.buttonOutline]} >
-                 <Text style={styles.buttonOutlineText}> Login </Text>   
-            </TouchableOpacity>
+                            <TextInput
+                                placeholder="Password"
+                                value={password}
+                                onChangeText={text => setPassword(text) }
+                                style={styles.input}
+                                secureTextEntry/>
+                        </View>
 
-            <TouchableOpacity
-                onPress={handleSignUp}
-                style={[styles.button, styles.buttonOutline]} >
-                 <Text style={styles.buttonOutlineText}> Sign Up </Text>   
-            </TouchableOpacity>
+                        <View style={styles.buttonContainer}>
+                            <TouchableOpacity
+                                onPress={handleLogin}
+                                style={[styles.button, styles.buttonOutline]} >
+                                <Text style={styles.buttonOutlineText}> Login </Text>   
+                            </TouchableOpacity>
 
-            <TouchableOpacity
-                onPress={handleAnonUser}
-                style={[styles.buttonRed, styles.buttonOutlineRed]}>
-                 <Text style={styles.buttonOutlineTextRed} > Try without an account </Text>   
-            </TouchableOpacity>
+                            <TouchableOpacity
+                                onPress={handleSignUp}
+                                style={[styles.button, styles.buttonOutline]} >
+                                <Text style={styles.buttonOutlineText}> Sign Up </Text>   
+                            </TouchableOpacity>
+
+                            <TouchableOpacity
+                                onPress={handleAnonUser}
+                                style={[styles.buttonRed, styles.buttonOutlineRed]}>
+                                <Text style={styles.buttonOutlineTextRed} > Try without an account </Text>   
+                            </TouchableOpacity>
+                </View>
+            </View>
+        
+        
             
         </View>
     </KeyboardAvoidingView>
@@ -195,13 +208,13 @@ const styles = StyleSheet.create({
         width: '60%',
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 40,
+        marginTop: 20,
     },
 
     button: {
         backgroundColor: '#0782F9',
-        width: '100%',
-        padding: 15,
+        width: '80%',
+        padding: 10,
         borderRadius: 10,
         alignItems: 'center',
     },
@@ -215,8 +228,8 @@ const styles = StyleSheet.create({
     },
     buttonRed: {
         backgroundColor: '#0782F9',
-        width: '100%',
-        padding: 15,
+        width: '80%',
+        padding: 10,
         borderRadius: 10,
         alignItems: 'center',
     },

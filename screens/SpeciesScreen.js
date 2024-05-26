@@ -921,7 +921,7 @@ const SpeciesScreen = (props) => {
               <View style={{padding: 20}}></View>
 
             <View style={styles.modalRow}>
-                  {(tagDictionary)?<Text style={{fontWeight:"bold", color:"white"}}> ⚠️ Downloading images...</Text>:<Text> Game is ready.</Text> }
+                  {(!tagDictionary)?<Text style={{fontWeight:"bold", color:"white"}}> ⚠️ Downloading images...</Text>:<Text style={{fontWeight:"bold", color:"white"}}> Game is ready.</Text> }
                 <TouchableOpacity
                   style={{...styles.gameSelection}}
                   onPress={() => {

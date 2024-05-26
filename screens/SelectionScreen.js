@@ -638,7 +638,9 @@ const SelectionScreen = (props) => {
       FamiliesButtons.push(
         <View>
 
-        {(!downloadRequested)?
+
+        {/* DISABLED BECAUSE IT FETCHES ONE GAME BUT APPEARS TO FETCH ALL WHEN MOVING TO ANOTHER MODAL}
+        {/* {(!downloadRequested)?
         <View key={'FamiliesBlock Wifi'} style={{position: 'absolute', justifyContent: 'space-between'}} flexDirection='row'>
         <Text style={{fontWeight:"bold", color:"white", marginTop:50}}> ⚠️ Wifi required to play.</Text>  
         <Pressable 
@@ -669,7 +671,7 @@ const SelectionScreen = (props) => {
         </Pressable>
         </View >
         
-        }
+        } */}
 
 
         <View key={'FamiliesBlock padding'} padding={20}></View>
@@ -748,11 +750,11 @@ const SelectionScreen = (props) => {
       
       <View style={{flex: 1, flexDirection: 'column', justifyContent: 'center'}}>
 
-      <Image source={require("../logo.png")} style={{height:50, width:50, marginTop:135, marginLeft:35, borderRadius: 0}}></Image>
+      <Image source={require("../logo.webp")} style={{height:100, width:100, marginTop:135, marginLeft:35, borderRadius: 20}}></Image>
 
-      <Text  style={{color: '#b6dbd8', fontSize:20}}  marginLeft={(webView)?200:20} >
+      {/* <Text  style={{color: '#b6dbd8', fontSize:20}}  marginLeft={(webView)?200:20} >
         {'Cognitive Gen'} 
-      </Text>
+      </Text> */}
 
       {/* <Text  style={{color: '#b6dbd8'}} marginTop={45} marginLeft={(webView)?200:20} onPress={() => Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSfUEBELjhxyWh9OnZihgpEBbdzfSr1nO1hb5atfWFZfEsZgzg/viewform?usp=sf_link')}>
         {'Send suggestions \n to the team'} 
@@ -760,7 +762,7 @@ const SelectionScreen = (props) => {
       <View padding={40}></View>
       {/* <TouchableOpacity style={styles.button} onPress={handleLogin}> <!--(auth.currentUser)?handleSignOut: */}
       
-      <TouchableOpacity style={{...styles.button, marginLeft:(webView)?15:1}} onPress={(auth.currentUser)?handleSignOut:handleLogin}> 
+      <TouchableOpacity style={{...styles.button, marginLeft:20}} onPress={(auth.currentUser)?handleSignOut:handleLogin}> 
               <Text style={styles.buttonText}>{(auth.currentUser)?"Sign Out":"Login"}</Text>
       </TouchableOpacity>
       </View>

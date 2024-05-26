@@ -26,3 +26,9 @@ When opening the modal on Game Selection Screen
 
 When Session Persistence redirects to SelectionScreen without gameFile being in props. Solution might be AsyncStorage.
  -- Bigger problem right now is crash on device, but change auth file for persistence.
+
+# redesigned login screen and bulk download button put on backburner
+{/* DISABLED BECAUSE IT FETCHES ONE GAME BUT APPEARS TO FETCH ALL WHEN MOVING TO ANOTHER MODAL}
+
+
+# Feedback is broken.
