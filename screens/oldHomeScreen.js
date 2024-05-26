@@ -1,6 +1,8 @@
 import { StyleSheet, Image, Text, TouchableOpacity, View, TouchableHighlight, TextInput, StatusBar, Platform, Linking, Dimensions } from 'react-native'
 import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
+// import { Image } from 'expo-image';
 import Modal from "react-native-modal";
+
 import { auth, storage, database } from '../firebase'
 import { uid } from 'uid';
 import { useNavigation } from '@react-navigation/core'
@@ -54,25 +56,12 @@ const HomeScreen = (props) => {
   const [tagDictionary, setTagDictionary] = useState()
   const [selectedGame, setSelectedGame] = useState(props.route.params.name)
   // const selectedGame =  
-  console.log('selected Game 2 is', selectedGame)
+  console.log('selected Game is', selectedGame)
   const selectedFolder = props.route.params?.folder
-  
   console.log('selected Folder is', selectedFolder)
-  const [tagList, setTagList] = useState(spoofGameFolders[selectedFolder][selectedGame])
-  const [initFlag, setInitFlag] = useState(0)
-
-  // LOCATIONS REFERENCES: Download locations using the tags from Gamefile
-
-  // Empty the gallery in preparation for Download
-  // const myTags = spoofGameFolders[selectedFolder][selectedGame]
-  // allTags = spoofGameFolders[selectedFolder][selectedGame] //4 tags
-  // console.log("allTags is ", allTags)
-  // // allTags = spoofGameFolders[selectedFolder][selectedGame] //all macro tags
-  // setTagList(myTags)
-  
   useEffect(()=>{   
 
-    
+
 
     // First if-else downloads the gameFile (and avoids task if already done)
 
@@ -98,18 +87,16 @@ const HomeScreen = (props) => {
     if (props.route.params.gameDownloaded){ //if exists and true.
       // Tags already passed through the navigator
       console.log("--> Images already Downloaded. Starting the Shuffle.")
+      // setGalleryTags(savedMacroTags)
       // console.log(savedMacroTags)
-      // console.log(savedMacroTags)
-      // doShuffleAndLay(savedMacroTags)
+      doShuffleAndLay(savedMacroTags)
       setTagDictionary(savedMacroTags)
       setGalleryTags(savedMacroTags)
-      
 
     } else {
-      console.log("TagDict not passed.")
       // Set up the Tag List to retrieve images by reference from Firebase Realtime Database.
       macroTags = spoofGameFolders[selectedFolder][macroName+'_ALL'] // All macro tags
-      console.log(selectedFolder , ' / ', macroName,'_ALL')
+      console.log(selectedFolder + ' / ', macroName+'_ALL')
       console.log('--> Downloading images for: ', macroName+'_ALL')
       persistantMacroTagList = []
       persistantMacroTagList.push(...macroTags)
@@ -126,25 +113,17 @@ const HomeScreen = (props) => {
   const doShuffleAndLay = async(allGalleryTags) => {
     // setGalleryTags(allGalleryTags)
     // console.log('taglist is: ', tagList, '\n and ')
-    // console.log('doShuffleAndLay: ', allGalleryTags)
-    var tagUrls = []
+    // console.log(allGalleryTags)
+    let tagUrls = []
     
     for (let tag_i=0; tag_i<tagList.length ; tag_i++) {
-      try {
-        // console.log('id of tag', tag_i)
-        // console.log('getting tag', tagList[tag_i])
-        // console.log('getting url list for tag', ...allGalleryTags[tagList[tag_i]])
+      console.log('tag is', tagList[tag_i])
+      // console.log('entry is', allGalleryTags)
+      if (tagUrls.length == 0){
+        tagUrls = [...allGalleryTags[tagList[tag_i]]]
+      } else {
         tagUrls = [...tagUrls, ...allGalleryTags[tagList[tag_i]]]
-      } catch (error) {
-        console.log(error)
       }
-      
-      
-      // if (tagUrls.length == 0){
-        
-      // } else {
-      //   tagUrls = [...tagUrls, ...allGalleryTags[tagList[tag_i]]]
-      // }
       
     }
     // .then(()=>{
@@ -152,23 +131,15 @@ const HomeScreen = (props) => {
     // })
 
     do {
-      console.log('doShuffleAndLay -')
+      console.log('Shuffling -')
 
+      
       
       tagUrls.sort( () => .3 - Math.random() );
+      
       visibleGallery = tagUrls.slice(2, 10)
       tagDict = {...allGalleryTags}
-      // console.log(tagDict[correctTag])
-      // if (tagDict[correctTag]) {
-        selectionUrls = tagDict[correctTag]
-        correctLeftInGallery = selectionUrls.filter((url) => visibleGallery.includes(url) )
-
-      // } else {
-        // correctLeftInGallery = []
-
-      // }
-
-      
+      correctLeftInGallery = tagDict[correctTag].filter((url) => visibleGallery.includes(url) )
       
     } while (correctLeftInGallery.length != 2)
     // validation
@@ -176,9 +147,10 @@ const HomeScreen = (props) => {
 
     // Render late to prevent visible reshuffling.
     setGallery([...visibleGallery])
-    // console.log(visibleGallery)
+    console.log(visibleGallery)
+    // setSortingGallery([])
   }
-
+    
   const userData = props.route.params?.data  
   const hint = props.route.params?.hint
   const applicationImages = props.route.params?.application
@@ -198,12 +170,10 @@ const HomeScreen = (props) => {
     navigation.setOptions({
       title: gameName+' Game',
     });
-    // console.log('hint is', hint)
+    console.log('hint is', hint)
     if (gameIsThreaded){
       setLearningLevel(spoofMacroGameSets[selectedFolder][macroName][macroLevel][3])
     }
-    var gameName = spoofMacroGameSets[selectedFolder][macroName][gameSetLevel][0]//spoofGameSets[selectedGame][gameSetLevel]
-    console.log(macroName, "is the game noww. Selected Game is", selectedGame, "and gameName is", gameName)
 
     /* CAREFUL, VISIBLE PERFORMANCE LIMITATIONS. */
     // let fileName = "Dogs"
@@ -216,11 +186,6 @@ const HomeScreen = (props) => {
     // }
 
   }, []);
-
-  useEffect(() => {
-    doShuffleAndLay(tagDictionary)
-  }, [initFlag]);
-
   // const netInfo = useNetInfo();
   const toast = useRef(null);
   const [url, setUrl] = useState();
@@ -232,14 +197,15 @@ const HomeScreen = (props) => {
   const [incorrectClickCount, setIncorrectClickCount] = useState(0)
   
   const [successRate, setSuccessRate] = useState(1)
-  const [modalVisible, setModalVisible] = useState(false)
+  const [modalVisible, setModalVisible] = useState(true)
   // setSelectedGame(spoofMacroGameSets[selectedFolder][macroName][gameSetLevel][0])
-  
+  var gameName = spoofMacroGameSets[selectedFolder][macroName][gameSetLevel][0]//spoofGameSets[selectedGame][gameSetLevel]
+  console.log(macroName, "is the game noww. Selected Game is", selectedGame, "and gameName is", gameName)
   // const [gameName, setGameName ] = useState(spoofIncorrectTag[gameName][learningLevel]) // this is an issue upon first load.
   const [incorrectTag, setIncorrectTag ] = useState(spoofIncorrectTag[selectedGame][learningLevel]) // this is an issue upon first load.
   const [instructionText, setInstructionText] = useState(spoofInstructions[selectedGame][learningLevel])
   const [correctTag, setCorrectTag] = useState(spoofCorrectTag[selectedGame][learningLevel])
-  
+  const [tagList, setTagList] = useState(spoofGameFolders[selectedFolder][selectedGame])
   const [sort, setSort] = useState(false)
   
   // const [outcomeImage, setOutcomeImage] = useState(spoofOutcomeImages[gameName][learningLevel])
@@ -256,7 +222,6 @@ const HomeScreen = (props) => {
   
   // learningLevel update from progressCalculate
   useEffect(() => {
-    console.log('learningLevel useEffect triggered')
     // Reset gallery no matter if game still going / has ended.
     setGallery([]) 
     // setGalleryTags({}) // Keeping saved.
@@ -292,7 +257,7 @@ const HomeScreen = (props) => {
     setIncorrectTag(spoofIncorrectTag[selectedGame][learningLevel]) //Triggers DB Download + myTags (Hook)
     setShowHint(false)
     setGallery(old => [])
-    // console.log('tagDictionary: \n', tagDictionary)
+    console.log('tagDictionary: \n', tagDictionary)
     doShuffleAndLay(tagDictionary)
     // if (gameDownloaded) {
     //   doShuffleAndLay()
@@ -307,12 +272,11 @@ const HomeScreen = (props) => {
   // updating instructions brings up a toastmessage
   useEffect(() => {
     toast.current.show(instructionText, { type: "success" });
-    console.log('instructionText triggered')
   }, [instructionText])
 
   // Download when finished updated incorrectTag (via learningLevel change)
   useEffect(()=> {
-    console.log('allTags triggered')
+
     // LOCATIONS REFERENCES: Download locations using the tags from Gamefile
 
     // Empty the gallery in preparation for Download
@@ -321,12 +285,39 @@ const HomeScreen = (props) => {
     console.log("allTags is ", allTags)
     // allTags = spoofGameFolders[selectedFolder][selectedGame] //all macro tags
     setTagList(myTags)
-    // doShuffleAndLay(tagDictionary)
-    setInitFlag(1)
+    // next_ref = ref(storage, selectedFolder + '/'+correctTag+'/');
+    // allTags.filter(tag => tag !== correctTag);
+    // getImagesFromRef(next_ref, correctTag, 4)
+    
+    // for (let i_ref=0; i_ref<allTags.length; i_ref++){
+    //   nextTag = allTags[i_ref]
+    //   next_ref = ref(storage, selectedFolder + '/'+nextTag+'/');
+    //   getImagesFromRef(next_ref, allTags, 4)
+    // }
+
+    
+  
+    // const correctListRef = ref(storage, selectedFolder + '/'+correctTag+'/');
+    // console.log(incorrectTag)
+    // const incorrectListRef = ref(storage, selectedFolder + '/'+incorrectTag[0]+'/');
+    
+    // if (incorrectTag.length>1){
+    //   var incorrectListRef2 = ref(storage, selectedFolder + '/'+incorrectTag[1]+'/');
+    //   var incorrectListRef3 = ref(storage, selectedFolder + '/'+incorrectTag[2]+'/');
+    // }
+
+    // Download from DB storage to gallery
+    // getImagesFromRef(incorrectListRef, incorrectTag[0], 4).then(()=>{
+    //   getImagesFromRef(correctListRef, correctTag, 4)?.then(()=> {
+    //       getImagesFromRef(incorrectListRef2, incorrectTag[1], 4)?.then(()=> {
+    //         if (incorrectListRef3){
+    //           getImagesFromRef(incorrectListRef3, incorrectTag[2], 4)
+    //         }  
+    //     })
+    //   })
+    // })     
 
   }, [incorrectTag]) //TEST
-
-
 
 
   const getAudioLoaded = async() => {
@@ -346,11 +337,11 @@ const HomeScreen = (props) => {
   
   const getImagesRecursively = (localMacroTagList, persistantMacroTagList) => {
 
-      // console.log('#getImagesRecursively function ---- tagPersistance', persistantMacroTagList)
+      console.log('#getImagesRecursively function ---- tagPersistance', persistantMacroTagList)
       // console.log("CURRENT TAGS:", allTags)
       nextTag = localMacroTagList[0]
       
-      // console.log('--> Calling tag: ', nextTag, 'inside selectedFolder:', selectedFolder)
+      console.log('--> Calling tag: ', nextTag, 'inside selectedFolder:', selectedFolder)
       next_ref = ref(storage, selectedFolder + '/'+nextTag+'/');
       let shiftedLocalTags= localMacroTagList.filter((tag => tag!==nextTag))
       
@@ -359,7 +350,7 @@ const HomeScreen = (props) => {
           // sleep(100).then(() => { getImagesRecursively(shiftedAllTags); });
           getImagesRecursively(shiftedLocalTags, persistantMacroTagList);
         } else {
-          console.log("## Finally updated Gallery:")
+          console.log("################### Final updated Gallery:", galleryTags)
           // setGameDownloaded(true) // This is now a hook
           // getImagesFromRef(next_ref, nextTag, 4).then(()=>{
           //   doShuffleAndLay(galleryTags)
@@ -375,7 +366,7 @@ const HomeScreen = (props) => {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
   const getImagesFromRef = async(ref, tagLabel, upperLimit=5, persistantMacroTagList) => {
-    // console.log('#getImagesFromRef function ---- tagPersistance', persistantMacroTagList)
+    console.log('#getImagesFromRef function ---- tagPersistance', persistantMacroTagList)
     if (ref==undefined){
       console.log('skipping ref because storage is undefined:', ref)
       return
@@ -399,8 +390,8 @@ const HomeScreen = (props) => {
                         // This works like 3 times and then error: 
                         getDownloadURL(itemRef).then((y)=> {
                           // Prototype working, should only be run when uncached.
-                          var nextPrefetch = Image.prefetch(y, (id)=> console.log("fetched ", id, "url: "))
-                          // console.log(y) // url
+                          var nextPrefetch = Image.prefetch(y, (id)=> console.log("fetched ", id, "url: ", y))
+                          // console.log(y)
                           // getMetadata(itemRef)
                           //   .then((metadata) => {
                               
@@ -424,7 +415,7 @@ const HomeScreen = (props) => {
                                       // Really important to get all the {gameName}_ALL before setting this variable -> Allowing user interaction.
                                       setTagDictionary(tagDict)
                                       
-                                      // console.log("Tag Dictionary", tagDict)
+                                      console.log("Tag Dictionary", tagDict)
                                     }
 
 
@@ -432,13 +423,13 @@ const HomeScreen = (props) => {
                                     console.log('detected true')
                                     /* (2) Displaying urls on Page */
                                     
-                                    setSortingGallery(oldSortingGallery => {
+                                    setSortingGallery(gallery => {
                                       // gallery urls taken from galleryTags[tag] of length upperLimit
-                                      galleryVal = [...oldSortingGallery, ...tagDict[tagLabel]] 
-                                      console.log('val length: ',galleryVal.length)
-                                      console.log('Building a tagDict now at ',Object.keys(tagDict).length ,'/',persistantMacroTagList.length, ' keys.')
+                                      galleryVal = [...gallery, ...tagDict[tagLabel]] 
+                                      console.log('val length: '+galleryVal.length)
+                                      console.log('Building a tagDict now at '+Object.keys(tagDict).length + '/'+persistantMacroTagList.length+ ' keys.')
                                       // console.log('ORIGINAL LIST: ', persistantMacroTagList)
-                                      // console.log("sortingGallery", oldSortingGallery)
+                                      // console.log("sortingGallery", gallery)
                                       
                                       // sorting Gallery: if 12 urls reached, shuffle until only 2 correct in the visible portion.
 
@@ -528,7 +519,7 @@ const HomeScreen = (props) => {
   const [sortingGallery, setSortingGallery] = useState([]) 
   const [gallery, setGallery] = useState([null])
   
-  // console.log('LENGTH: ', onlineGallery.length)
+  console.log('LENGTH: ', onlineGallery.length)
 
   const pushImage = (y) => {
     if (onlineGallery) {
@@ -757,22 +748,7 @@ const HomeScreen = (props) => {
       setGameSetLevel(previous => previous+1)
       setGameComplete(false)
       // Optional Modal Window
-      // setModalVisible(true)
-
-      navigation.replace("Species", { 
-        gameFile: gameFile,
-        name: spoofMacroGameSets[selectedFolder][macroName][macroLevel][0],
-        folder: spoofMacroGameSets[selectedFolder][macroName][macroLevel][2],
-        macroLevel: macroLevel,
-        macroName: macroName,
-        hint: hint, 
-        gameIsThreaded: 1,
-        gameDownloaded: 1, // Ideally set to 1 to limit the number of downloads
-        galleryTags: tagDictionary,
-        application: applicationImages,
-        level: gameSetLevel, //gameName?
-        data: (auth.currentUser)?userData:0 })
-
+      setModalVisible(true)
       return
     } else {
       // setGameSetComplete(true)
@@ -921,7 +897,6 @@ const HomeScreen = (props) => {
        <View style={{ flex: 1, width: 20, height: 150*3, backgroundColor: 'rgb(13, 1, 117)' }}></View>
       <View style={{flexDirection: 'column'}}>
         <TouchableHighlight onPress={()=> handlePicSelection(1)}>
-        {gallery[0] !== '' ?
           <Image 
 
             source={{uri:`${gallery[0]}`,}}
@@ -929,18 +904,17 @@ const HomeScreen = (props) => {
             placeholder={blurhash}
             contentFit="cover"
             transition={1000}
-          />:null}
+          />
         </TouchableHighlight>
 
         <TouchableHighlight onPress={()=> handlePicSelection(4)}>
-        {gallery[3] !== '' ?
         <Image 
           source={{uri:`${gallery[3]}`,}}
           style={styles.imageContainer}
           placeholder={blurhash}
           contentFit="cover"
           transition={1000}
-        />:null}
+        />
         </TouchableHighlight>    
 
       </View>
@@ -950,25 +924,23 @@ const HomeScreen = (props) => {
 
 
         <TouchableHighlight onPress={()=> handlePicSelection(2)}>
-        {gallery[1] !== '' ?
         <Image 
           source={{uri:`${gallery[1]}`,}}
           style={styles.imageContainer}
           placeholder={blurhash}
           contentFit="cover"
           transition={1000}
-        />:null}
+        />
         </TouchableHighlight>
 
         <TouchableHighlight onPress={()=> handlePicSelection(5)}>
-          {gallery[4] !== '' ?
           <Image 
             source={{uri:`${gallery[4]}`,}}
             style={styles.imageContainer}
             placeholder={blurhash}
             contentFit="cover"
             transition={1000}
-          />:null}        
+          />        
         </TouchableHighlight>
         
       </View>
@@ -977,25 +949,23 @@ const HomeScreen = (props) => {
 
 
         <TouchableHighlight onPress={()=> handlePicSelection(3)}>
-        {gallery[2] !== '' ?
         <Image 
           source={{uri:`${gallery[2]}`,}}
           style={styles.imageContainer}
           placeholder={blurhash}
           contentFit="cover"
           transition={1000}
-        />:null} 
+        />
         </TouchableHighlight>
 
         <TouchableHighlight onPress={()=> handlePicSelection(6)}>
-        {gallery[5] !== '' ?
           <Image 
             source={{uri:`${gallery[5]}`,}}
             style={styles.imageContainer}
             placeholder={blurhash}
             contentFit="cover"
             transition={1000}
-          />:null}         
+          />        
         </TouchableHighlight>
       </View>
       <View style={{ flex: 1, width: 20, height: 150*3, backgroundColor: 'rgb(13, 1, 117)' }}/></View>
@@ -1243,11 +1213,10 @@ const HomeScreen = (props) => {
                   onPress={() => {
                   if (tagDictionary){
                     doShuffleAndLay(tagDictionary).then(()=>{
-                      setModalVisible(!modalVisible) // GO TO SPECIES SCREEN
+                      setModalVisible(!modalVisible)
                     })
                   } else {
-                    // toast.current.show("Loading game.");
-                    toast.current.show("Loading game.", { type: "success" });
+                    toast.current.show("Loading game.");
                   }
                     
                   //   if (Platform.OS === "android") {
